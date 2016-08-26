@@ -28,10 +28,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Button;
+import android.location.Location;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.plus.Plus;
+
 
 import com.tbay.android.common.logger.Log;
 import com.tbay.android.common.logger.LogFragment;
@@ -46,9 +55,11 @@ import com.tbay.android.common.logger.MessageOnlyLogFilter;
  * This sample uses the logging framework to display log output in the log
  * fragment (LogFragment).
  */
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends FragmentActivity implements
+        GoogleApiClient.ConnectionCallbacks,
+        GoogleApiClient.OnConnectionFailedListener {
 
-    public static final String TAG = "TCP Client";
+    public static final String TAG = "FrequentSMS";
     public static int i = 0;
 
     // Whether there is a Wi-Fi connection.
@@ -59,6 +70,7 @@ public class MainActivity extends FragmentActivity {
     // Reference to the fragment showing events, so we can clear it with a button
     // as necessary.
     private LogFragment mLogFragment;
+    private GoogleApiClient mGoogleApiClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +82,11 @@ public class MainActivity extends FragmentActivity {
 
         EditText Txt = (EditText) findViewById(R.id.SMSText);
         Txt.setText(R.string.Wifi_txt);
+
+        // Create an instance of GoogleAPIClient.
+        if (mGoogleApiClient == null) {
+            mGoogleApiClient = new GoogleApiClient.Builder(this).addConnectionCallbacks(this).addOnConnectionFailedListener(this).addApi(LocationServices.API).build();
+        }
     }
 
     @Override
@@ -172,6 +189,16 @@ public class MainActivity extends FragmentActivity {
         new BackgroundActivity().execute(args);
     }
 
+    protected void onStart() {
+        mGoogleApiClient.connect();
+        super.onStart();
+    }
+
+    protected void onStop() {
+        mGoogleApiClient.disconnect();
+        super.onStop();
+    }
+
     /**
      * Check whether the device is connected, and if so, whether the connection
      * is wifi or mobile (it could be something else).
@@ -212,4 +239,49 @@ public class MainActivity extends FragmentActivity {
         MessageOnlyLogFilter msgFilter = new MessageOnlyLogFilter();
         logWrapper.setNext(msgFilter);
     }
-}
+
+    private void handleNewLocation(Location loc) {
+        Log.i(TAG, loc.toString());
+        TextView Txt = (TextView) findViewById(R.id.CurrentPosition);
+
+        Txt.setText(loc.toString());
+    }
+
+    @Override
+    public void onConnected(Bundle bundle) {
+        Log.i(TAG, "Location services connected.");
+        Location location = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+
+        if (location == null) {
+            // Blank for a moment...
+        }
+        else {
+            handleNewLocation(location);
+        };
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+        Log.i(TAG, "Location services suspended. Please reconnect.");
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //setUpMapIfNeeded();
+        mGoogleApiClient.connect();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (mGoogleApiClient.isConnected()) {
+            mGoogleApiClient.disconnect();
+        }
+    }
+ }

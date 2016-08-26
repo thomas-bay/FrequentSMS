@@ -17,7 +17,7 @@ import java.util.regex.*;
  */
 public class BackgroundActivity extends AsyncTask<String, Void, Void>{
 
-    public static final String TAG = "TCP Client";
+    public static final String TAG = "FrequentSMS";
 
 //    @Override
     protected Void doInBackground(String... ip) {

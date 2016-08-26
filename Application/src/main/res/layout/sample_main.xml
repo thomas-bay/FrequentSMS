@@ -76,6 +76,12 @@
             android:layout_gravity="center_horizontal"
             android:onClick="sendSMS" />
 
+        <TextView
+            android:text="Position"
+            android:layout_width="347dp"
+            android:layout_height="131dp"
+            android:id="@+id/CurrentPosition" />
+
     </RadioGroup>
 
 </RadioGroup>

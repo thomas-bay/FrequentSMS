@@ -35,7 +35,7 @@ public class SimpleTextFragment extends Fragment {
     // Contains the text that will be displayed by this Fragment
     String mText;
 
-    // Contains a resource ID for the text that will be displayed by this fragment.
+    // Contains a resource ID for the text that will be d isplayed by this fragment.
     int mTextId = -1;
 
     // Keys which will be used to store/retrieve text passed in via setArguments.

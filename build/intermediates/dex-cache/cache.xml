@@ -2,39 +2,39 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Thomas\AndroidStudioProjects\TCPClient\Application\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\libs\internal_impl-21.0.2.jar"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\TCPClient\Application\build\intermediates\pre-dexed\debug\internal_impl-21.0.2-8432cad3cc79214911929d771eb9f452fc0a24e5.jar" />
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\pre-dexed\debug\internal_impl-21.0.3_cea6993f030f482e6cc9c483f22012e46cfbbac7.jar" />
     </item>
     <item
-        jar="C:\Users\Thomas\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.2\support-annotations-21.0.2.jar"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\TCPClient\Application\build\intermediates\pre-dexed\debug\support-annotations-21.0.2-9bf72b4c9fd53c6a994598d756b9ff05434bb32e.jar" />
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-21.0.3_a23c553b0bac30286be5d181b561f45b941464da.jar" />
     </item>
     <item
-        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\jars\classes.jar"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.5.87\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\pre-dexed\debug\com.android.support-support-v4-21.0.2_77517a16f897fa718cd34d1211ac4cb11cb754a6.jar" />
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-6.5.87_dafa37cb5856e8a636dd65a26736693f7cd6e165.jar" />
     </item>
     <item
-        jar="C:\Users\Thomas\AndroidStudioProjects\TCPClient\Application\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\classes.jar"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\TCPClient\Application\build\intermediates\pre-dexed\debug\classes-2f82ff84f152e93e3f4ff484d8f88e119a51db97.jar" />
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\pre-dexed\debug\com.android.support-support-v4-21.0.3_389e7d97e330bfa8ab8f2274b6646c9a0046e756.jar" />
     </item>
     <item
-        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\jars\libs\internal_impl-21.0.2.jar"
+        jar="C:\Users\Thomas\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\pre-dexed\debug\internal_impl-21.0.2_b5e5d8a69754dfa08d032d9faed5162e309f963d.jar" />
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\pre-dexed\debug\support-annotations-21.0.3_e20fe9ce6c176e81c17db02969726e2bb90560a4.jar" />
     </item>
 
 </items>

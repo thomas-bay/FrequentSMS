@@ -1,4 +1,0 @@
-C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\classes\debug
-C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\pre-dexed\debug\support-annotations-21.0.2-9bf72b4c9fd53c6a994598d756b9ff05434bb32e.jar
-C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\pre-dexed\debug\internal_impl-21.0.2-dd0444c580867f05103e0846b05c690d9cd65868.jar
-C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\pre-dexed\debug\classes-eb32d5388d568bca5cd9a176ed18c56365fbd772.jar
