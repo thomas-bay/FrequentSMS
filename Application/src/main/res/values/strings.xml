@@ -29,5 +29,6 @@
     <string name="Hjemme_txt">Jeg er hjemme om et kvarter.</string>
     <string name="TestSMS_txt">Test sms message from App</string>
     <string name="Indkøb">Er der noget jeg skal købe med på vejen hjem?</string>
+    <string name="geofence_transition_invalid_type">Geofence invalid transition type</string>
 
 </resources>

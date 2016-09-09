@@ -1888,18 +1888,19 @@ containing a value of this type.
         public static final int create_calendar_message=0x7f070035;
         public static final int create_calendar_title=0x7f070036;
         public static final int decline=0x7f070037;
-        public static final int intro_message=0x7f070038;
-        public static final int ip_text=0x7f070039;
-        public static final int mobile_connection=0x7f07003a;
-        public static final int no_wifi_or_mobile=0x7f07003b;
-        public static final int send_text=0x7f07003c;
-        public static final int start_text=0x7f07003d;
-        public static final int stop_text=0x7f07003e;
-        public static final int store_picture_message=0x7f07003f;
-        public static final int store_picture_title=0x7f070040;
-        public static final int test_text=0x7f070041;
+        public static final int geofence_transition_invalid_type=0x7f070038;
+        public static final int intro_message=0x7f070039;
+        public static final int ip_text=0x7f07003a;
+        public static final int mobile_connection=0x7f07003b;
+        public static final int no_wifi_or_mobile=0x7f07003c;
+        public static final int send_text=0x7f07003d;
+        public static final int start_text=0x7f07003e;
+        public static final int stop_text=0x7f07003f;
+        public static final int store_picture_message=0x7f070040;
+        public static final int store_picture_title=0x7f070041;
+        public static final int test_text=0x7f070042;
         public static final int wallet_buy_button_place_holder=0x7f07002b;
-        public static final int wifi_connection=0x7f070042;
+        public static final int wifi_connection=0x7f070043;
     }
     public static final class style {
         public static final int AppTheme=0x7f0b0067;

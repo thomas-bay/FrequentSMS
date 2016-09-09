@@ -16,11 +16,16 @@
 
 package com.tbay.android.FrequentSMS;
 
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.AsyncTask;
+import android.os.Handler;
+import android.os.Looper;
+import android.provider.SyncStateContract;
 import android.support.v4.app.FragmentActivity;
 import android.telephony.SmsManager;
 import android.util.TypedValue;
@@ -38,6 +43,8 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.location.Geofence;
+import com.google.android.gms.location.GeofencingRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.plus.Plus;
 
@@ -46,6 +53,11 @@ import com.tbay.android.common.logger.Log;
 import com.tbay.android.common.logger.LogFragment;
 import com.tbay.android.common.logger.LogWrapper;
 import com.tbay.android.common.logger.MessageOnlyLogFilter;
+
+import java.util.List;
+import java.util.ArrayList;
+
+
 
 /**
  * Sample application demonstrating how to test whether a device is connected,
@@ -67,11 +79,34 @@ public class MainActivity extends FragmentActivity implements
     // Whether there is a mobile connection.
     private static boolean mobileConnected = false;
 
+    // GEofencing variables and constants
+    double WorkLatitude = 55.657721;
+    double WorkLongitude = 12.273066;
+    float WorkRadius = (float) 200.0;
+
+    String WorkFenceId = "Workplace";
+
     // Reference to the fragment showing events, so we can clear it with a button
     // as necessary.
     private LogFragment mLogFragment;
     private GoogleApiClient mGoogleApiClient;
+    private Geofence mWorkFence;
+    private GeofencingRequest.Builder mGeoFencingReq;
+    private List<Geofence> mGeofences;
+    private PendingIntent mGeofencePendingIntent;
 
+    private Handler mHandler;
+
+    private PendingIntent getGeofencePendingIntent() {
+        // Reuse the PendingIntent if we already have it.
+        if (mGeofencePendingIntent != null) {
+           return mGeofencePendingIntent;
+        }
+        Intent intent = new Intent(this, GeofenceTransitionsIntentService.class);
+        // We use FLAG_UPDATE_CURRENT so that we get the same pending intent back when
+        // calling addGeofences() and removeGeofences().
+        return PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,6 +122,35 @@ public class MainActivity extends FragmentActivity implements
         if (mGoogleApiClient == null) {
             mGoogleApiClient = new GoogleApiClient.Builder(this).addConnectionCallbacks(this).addOnConnectionFailedListener(this).addApi(LocationServices.API).build();
         }
+
+        // Create an instance of Geofence.
+        if (mWorkFence == null) {
+            mWorkFence = new Geofence.Builder().setRequestId(WorkFenceId)
+                    .setCircularRegion(WorkLatitude, WorkLongitude, WorkRadius)
+                    .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER)
+                    .setExpirationDuration(Geofence.NEVER_EXPIRE).build();
+            mGeofences = new ArrayList<Geofence>();
+
+
+            mGeofences.add(mWorkFence);  // <<<<<======= Problem here. geofences is null
+
+            mGeoFencingReq = new GeofencingRequest.Builder();
+            mGeoFencingReq.setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_DWELL);
+            mGeoFencingReq.addGeofences(mGeofences);
+
+            Intent mGeofencePendingIntent = new Intent(this, GeofenceTransitionsIntentService.class);
+
+        }
+
+        // Defines a Handler object that's attached to the UI thread
+        mHandler = new Handler(Looper.getMainLooper());
+
+        //XXXX
+        //mGeofenceList.add(new Geofence.Builder()
+    }
+
+    public void Handler() {
+
     }
 
     @Override
@@ -241,6 +305,7 @@ public class MainActivity extends FragmentActivity implements
     }
 
     private void handleNewLocation(Location loc) {
+
         Log.i(TAG, loc.toString());
         TextView Txt = (TextView) findViewById(R.id.CurrentPosition);
 
@@ -284,4 +349,5 @@ public class MainActivity extends FragmentActivity implements
             mGoogleApiClient.disconnect();
         }
     }
+
  }
