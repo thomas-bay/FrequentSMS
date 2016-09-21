@@ -438,9 +438,10 @@ int drawable powered_by_google_dark 0x7f020052
 int drawable powered_by_google_light 0x7f020053
 int drawable tile 0x7f020054
 int id Aftensmad 0x7f0d0055
-int id CurrentPosition 0x7f0d005a
+int id CurrentPosition 0x7f0d005b
 int id SMSText 0x7f0d0058
 int id Snart_hjemme 0x7f0d0056
+int id TestButton 0x7f0d0059
 int id TestSMS 0x7f0d0057
 int id Wifi 0x7f0d0054
 int id action_bar 0x7f0d0045
@@ -462,7 +463,7 @@ int id adjust_width 0x7f0d0017
 int id always 0x7f0d001b
 int id beginning 0x7f0d0013
 int id book_now 0x7f0d002b
-int id button 0x7f0d0059
+int id button 0x7f0d005a
 int id buyButton 0x7f0d0028
 int id buy_now 0x7f0d002c
 int id buy_with_google 0x7f0d002d

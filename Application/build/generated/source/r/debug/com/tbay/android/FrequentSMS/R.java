@@ -1700,9 +1700,10 @@ containing a value of this type.
     }
     public static final class id {
         public static final int Aftensmad=0x7f0d0055;
-        public static final int CurrentPosition=0x7f0d005a;
+        public static final int CurrentPosition=0x7f0d005b;
         public static final int SMSText=0x7f0d0058;
         public static final int Snart_hjemme=0x7f0d0056;
+        public static final int TestButton=0x7f0d0059;
         public static final int TestSMS=0x7f0d0057;
         public static final int Wifi=0x7f0d0054;
         public static final int action_bar=0x7f0d0045;
@@ -1724,7 +1725,7 @@ containing a value of this type.
         public static final int always=0x7f0d001b;
         public static final int beginning=0x7f0d0013;
         public static final int book_now=0x7f0d002b;
-        public static final int button=0x7f0d0059;
+        public static final int button=0x7f0d005a;
         public static final int buyButton=0x7f0d0028;
         public static final int buy_now=0x7f0d002c;
         public static final int buy_with_google=0x7f0d002d;

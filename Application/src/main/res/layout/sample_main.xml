@@ -69,6 +69,14 @@
             android:id="@+id/SMSText" />
 
         <Button
+            android:text="Test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TestButton"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onTest" />
+
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Send SMS"
@@ -79,7 +87,7 @@
         <TextView
             android:text="Position"
             android:layout_width="347dp"
-            android:layout_height="131dp"
+            android:layout_height="107dp"
             android:id="@+id/CurrentPosition" />
 
     </RadioGroup>

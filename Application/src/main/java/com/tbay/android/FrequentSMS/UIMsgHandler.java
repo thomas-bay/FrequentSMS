@@ -1,13 +1,21 @@
 package com.tbay.android.FrequentSMS;
 
+import android.app.Activity;
+import android.os.Handler;
+import android.os.Message;
+
 /**
  * Created by Thomas on 29-Aug-16.
  */
-public class UIMsgHandler {
+public class UIMsgHandler  extends Handler {
 
     public UIMsgHandler(String name) {
-            super(name);
+            super();
     }
 
-    public void Handle() {};
+    @Override
+    public void handleMessage(Message msg) {
+
+    }
 }
+
