@@ -29,6 +29,7 @@ import android.telephony.SmsManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.RadioGroup;
@@ -79,53 +80,58 @@ public class MainActivity extends FragmentActivity implements
     double WorkLatitude = 55.657721;
     double WorkLongitude = 12.273066;
     float WorkRadius = (float) 200.0;
+    String WorkFenceId = "Workplace";
 
     double HomeLatitude = 55.747748;
     double HomeLongitude = 12.388965;
-    float HomeRadius = (float) 250.0;
-
-    String WorkFenceId = "Workplace";
+    float HomeRadius = (float) 100.0;
     String HomeFenceId = "Home";
+
+    double BibloLatitude = 55.729438;
+    double BibloLongitude = 12.359988;
+    float BibloRadius = (float) 100.0;
+    String LibraryId = "Biblo";
 
     // Reference to the fragment showing events, so we can clear it with a button
     // as necessary.
     private LogFragment mLogFragment;
     private GoogleApiClient mGoogleApiClient;
-    private Geofence mFence, mFence2;
     private GeofencingRequest.Builder mGeoFencingReqBuild;
     private List<Geofence> mGeofences;
     PendingIntent mGeofencePendingIntent;
-    //private Intent intent;
-    private static Context mAppContext;
-    //private UIMsgHandler mHandler;
-    private TextView textView;
+
     private BroadcastReceiver receiver = new BroadcastReceiver() {
 
         @Override
         public void onReceive(Context context, Intent intent) {
             Bundle bundle = intent.getExtras();
             if (bundle != null) {
+                String time = bundle.getString(GeofenceTransitionsIntentService.GFS_TIME);
                 String string = bundle.getString(GeofenceTransitionsIntentService.GFS_DETAILS);
                 int resultCode = bundle.getInt(GeofenceTransitionsIntentService.GFS_RESULT);
                 if (resultCode == RESULT_OK) {
-                    Toast.makeText(MainActivity.this,
+                    /*Toast.makeText(MainActivity.this,
                             "New GeoEvent: " + string,
-                            Toast.LENGTH_LONG).show();
+                            Toast.LENGTH_LONG).show();*/
 
                     Log.i(TAG, string);
 
-                    TextView Txt = (TextView) findViewById(R.id.CurrentPosition);
-                    Txt.setText(string);
+                    EditText Txt = (EditText) findViewById(R.id.Position2);
+                    Txt.append(time);
+                    Txt.append(" ");
+                    Txt.append(string);
+                    Txt.append("\n");
+
+                    //TextView Txt2 = (TextView) findViewById(R.id.CurrentPosition);
+                    //Txt2.setText(string);
 
                 } else {
                     Toast.makeText(MainActivity.this, "Download failed",
                             Toast.LENGTH_LONG).show();
-                    //textView.setText("Download failed");
                 }
             }
         }
     };
-
 
     private PendingIntent getGeofencePendingIntent() {
         // Reuse the PendingIntent if we already have it.
@@ -158,14 +164,7 @@ public class MainActivity extends FragmentActivity implements
 
         // Defines a Handler object that's attached to the UI thread
         // mHandler = new UIMsgHandler(this.toString());
-
-        mAppContext = getApplicationContext();
-
      }
-
-    static Context getContext() {
-        return mAppContext;
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -321,33 +320,40 @@ public class MainActivity extends FragmentActivity implements
     private void handleNewLocation(Location loc) {
 
         Log.i(TAG, loc.toString());
-        TextView Txt = (TextView) findViewById(R.id.CurrentPosition);
-
-        Txt.setText(loc.toString());
     }
 
     @Override
     public void onConnected(Bundle bundle) {
+        Geofence mFence;
         Log.i(TAG, "Location services connected.");
 
         // Create an instance of Geofence.
-        if (mFence == null) {
+        if (mGeofences == null) {
+            mGeofences = new ArrayList<Geofence>();
+
             mFence = new Geofence.Builder().setRequestId(HomeFenceId)
                     .setCircularRegion(HomeLatitude, HomeLongitude, HomeRadius)
                     .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER | Geofence.GEOFENCE_TRANSITION_DWELL | Geofence.GEOFENCE_TRANSITION_EXIT)
                     .setLoiteringDelay(20000)
                     .setExpirationDuration(Geofence.NEVER_EXPIRE).build();
 
-            mFence2 = new Geofence.Builder().setRequestId(WorkFenceId)
+            mGeofences.add(mFence);
+
+            mFence = new Geofence.Builder().setRequestId(WorkFenceId)
                     .setCircularRegion(WorkLatitude, WorkLongitude, WorkRadius)
                     .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_DWELL)
                     .setLoiteringDelay(20000)
                     .setExpirationDuration(Geofence.NEVER_EXPIRE).build();
 
-            mGeofences = new ArrayList<Geofence>();
+            mGeofences.add(mFence);
+
+            mFence = new Geofence.Builder().setRequestId(LibraryId)
+                    .setCircularRegion(BibloLatitude, BibloLongitude, BibloRadius)
+                    .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER | Geofence.GEOFENCE_TRANSITION_DWELL | Geofence.GEOFENCE_TRANSITION_EXIT)
+                    .setLoiteringDelay(20000)
+                    .setExpirationDuration(Geofence.NEVER_EXPIRE).build();
 
             mGeofences.add(mFence);
-            mGeofences.add(mFence2);
 
             mGeoFencingReqBuild = new GeofencingRequest.Builder();
             mGeoFencingReqBuild.setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER);
@@ -356,7 +362,6 @@ public class MainActivity extends FragmentActivity implements
 
             LocationServices.GeofencingApi.addGeofences(mGoogleApiClient, mGeofences, getGeofencePendingIntent()).setResultCallback(this);
         }
-
 
         Location location = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
 

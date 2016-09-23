@@ -1700,7 +1700,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int Aftensmad=0x7f0d0055;
-        public static final int CurrentPosition=0x7f0d005b;
+        public static final int Position2=0x7f0d005b;
         public static final int SMSText=0x7f0d0058;
         public static final int Snart_hjemme=0x7f0d0056;
         public static final int TestButton=0x7f0d0059;

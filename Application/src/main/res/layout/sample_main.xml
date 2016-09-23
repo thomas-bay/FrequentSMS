@@ -17,6 +17,7 @@
   -->
 
 <RadioGroup
+
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -84,11 +85,22 @@
             android:layout_gravity="center_horizontal"
             android:onClick="sendSMS" />
 
-        <TextView
-            android:text="Position"
-            android:layout_width="347dp"
-            android:layout_height="107dp"
-            android:id="@+id/CurrentPosition" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:ems="10"
+            android:selectAllOnFocus="false"
+            android:id="@+id/Position2"
+            android:scrollbars="vertical"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:textSize="14sp"
+            android:editable="false"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:verticalScrollbarPosition="right"
+            android:visibility="visible"
+            android:enabled="true" />
 
     </RadioGroup>
 

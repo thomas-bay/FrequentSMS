@@ -18,6 +18,8 @@ import com.google.android.gms.location.GeofencingEvent;
 import com.tbay.android.common.logger.Log;
 
 
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -35,6 +37,10 @@ public class GeofenceTransitionsIntentService extends IntentService {
     static final String GFS_RESULT = "result";
     static final String GFS_TRANSITION = "Transition";
     static final String GFS_DETAILS = "Details";
+    static final String GFS_TIME = "Time";
+    static final String GFS_POSITIONID = "Positions";
+
+
     int result = Activity.RESULT_CANCELED;
 
     protected static int GeofenceEventCount_ENTER = 0;
@@ -66,13 +72,13 @@ public class GeofenceTransitionsIntentService extends IntentService {
             geofenceTransition == Geofence.GEOFENCE_TRANSITION_EXIT ||
             geofenceTransition == Geofence.GEOFENCE_TRANSITION_DWELL) {
 
-            result = Activity.RESULT_OK;
-
             switch (geofenceTransition) {
                 case Geofence.GEOFENCE_TRANSITION_ENTER: ++GeofenceEventCount_ENTER; break;
                 case Geofence.GEOFENCE_TRANSITION_EXIT:  ++GeofenceEventCount_EXIT; break;
                 case Geofence.GEOFENCE_TRANSITION_DWELL: ++GeofenceEventCount_DWELL; break;
             }
+
+            result = Activity.RESULT_OK;
 
             // Get the geofences that were triggered. A single event can trigger
             // multiple geofences.
@@ -81,21 +87,33 @@ public class GeofenceTransitionsIntentService extends IntentService {
             // Get the transition details as a String.
             mGeofenceTransitionDetails = getGeofenceTransitionDetails(this, geofenceTransition, triggeringGeofences);
 
+            switch (geofenceTransition) {
+                case Geofence.GEOFENCE_TRANSITION_ENTER: mGeofenceTransitionDetails += " Enter"; break;
+                case Geofence.GEOFENCE_TRANSITION_EXIT:  mGeofenceTransitionDetails += " Exit"; break;
+                case Geofence.GEOFENCE_TRANSITION_DWELL: mGeofenceTransitionDetails += " Dwell";; break;
+            }
+
             // Send notification and log the transition details.
             sendNotification(mGeofenceTransitionDetails);
             Log.i(TAG, mGeofenceTransitionDetails);
+
+            Intent BcIntent = new Intent(TAG);  // Broadcast intent for signalling the MainActivity
+            BcIntent.putExtra(GFS_RESULT, result);
+            BcIntent.putExtra(GFS_TRANSITION, geofenceTransition);
+            //BcIntent.putExtra(GFS_POSITIONID, );
+
+            String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
+
+            BcIntent.putExtra(GFS_TIME, currentDateTimeString);
+            BcIntent.putExtra(GFS_DETAILS, mGeofenceTransitionDetails);
+
+
+            sendBroadcast(BcIntent);
 
          } else {
             // Log the error.
             Log.e(TAG, getString(R.string.geofence_transition_invalid_type));
         }
-
-        Intent BcIntent = new Intent(TAG);  // Broadcast intent for signalling the MainActivity
-        BcIntent.putExtra(GFS_RESULT, result);
-        BcIntent.putExtra(GFS_TRANSITION, geofenceTransition);
-        BcIntent.putExtra(GFS_DETAILS, mGeofenceTransitionDetails);
-
-        sendBroadcast(BcIntent);
     }
 
 

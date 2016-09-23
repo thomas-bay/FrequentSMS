@@ -438,7 +438,7 @@ int drawable powered_by_google_dark 0x7f020052
 int drawable powered_by_google_light 0x7f020053
 int drawable tile 0x7f020054
 int id Aftensmad 0x7f0d0055
-int id CurrentPosition 0x7f0d005b
+int id Position2 0x7f0d005b
 int id SMSText 0x7f0d0058
 int id Snart_hjemme 0x7f0d0056
 int id TestButton 0x7f0d0059
