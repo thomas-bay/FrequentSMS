@@ -38,8 +38,6 @@ public class GeofenceTransitionsIntentService extends IntentService {
     static final String GFS_TRANSITION = "Transition";
     static final String GFS_DETAILS = "Details";
     static final String GFS_TIME = "Time";
-    static final String GFS_POSITIONID = "Positions";
-
 
     int result = Activity.RESULT_CANCELED;
 
@@ -47,8 +45,6 @@ public class GeofenceTransitionsIntentService extends IntentService {
     protected static int GeofenceEventCount_EXIT = 0;
     protected static int GeofenceEventCount_DWELL = 0;
     private String mGeofenceTransitionDetails;
-    private Handler mGeofenceHandler;
-
 
     public GeofenceTransitionsIntentService() {
         super(TAG);
@@ -93,8 +89,7 @@ public class GeofenceTransitionsIntentService extends IntentService {
                 case Geofence.GEOFENCE_TRANSITION_DWELL: mGeofenceTransitionDetails += " Dwell";; break;
             }
 
-            // Send notification and log the transition details.
-            sendNotification(mGeofenceTransitionDetails);
+            // Log the event.
             Log.i(TAG, mGeofenceTransitionDetails);
 
             Intent BcIntent = new Intent(TAG);  // Broadcast intent for signalling the MainActivity
@@ -104,10 +99,11 @@ public class GeofenceTransitionsIntentService extends IntentService {
 
             String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
 
+            // Add the broadcast intent data
             BcIntent.putExtra(GFS_TIME, currentDateTimeString);
             BcIntent.putExtra(GFS_DETAILS, mGeofenceTransitionDetails);
 
-
+            // Inform the main activity
             sendBroadcast(BcIntent);
 
          } else {
@@ -115,8 +111,6 @@ public class GeofenceTransitionsIntentService extends IntentService {
             Log.e(TAG, getString(R.string.geofence_transition_invalid_type));
         }
     }
-
-
 
     private String getGeofenceTransitionDetails(GeofenceTransitionsIntentService geofenceTransitionsIntentService, int geofenceTransition, List triggeringGeofences) {
 
@@ -129,11 +123,5 @@ public class GeofenceTransitionsIntentService extends IntentService {
         }
 
         return String.format("%s (%d, %d, %d): %s", transitionString, GeofenceEventCount_ENTER, GeofenceEventCount_EXIT, GeofenceEventCount_DWELL, triggerIds);
-    }
-
-    private void sendNotification(String geofenceTransitionDetails) {
-    }
-
-    private class GeofenceErrorMessages {
     }
 }

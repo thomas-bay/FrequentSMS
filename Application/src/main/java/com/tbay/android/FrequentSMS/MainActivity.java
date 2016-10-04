@@ -69,7 +69,6 @@ public class MainActivity extends FragmentActivity implements
         ResultCallback<Status> {
 
     public static final String TAG = "FrequentSMS";
-    public static int i = 0;
 
     // Whether there is a Wi-Fi connection.
     private static boolean wifiConnected = false;
@@ -94,7 +93,6 @@ public class MainActivity extends FragmentActivity implements
 
     // Reference to the fragment showing events, so we can clear it with a button
     // as necessary.
-    private LogFragment mLogFragment;
     private GoogleApiClient mGoogleApiClient;
     private GeofencingRequest.Builder mGeoFencingReqBuild;
     private List<Geofence> mGeofences;
@@ -121,6 +119,12 @@ public class MainActivity extends FragmentActivity implements
                     Txt.append(" ");
                     Txt.append(string);
                     Txt.append("\n");
+
+                    SmsManager smsManager = SmsManager.getDefault();
+                    smsManager.sendTextMessage("30221982", null, string, null, null);
+
+                    if (bundle.getInt("Transition") == Geofence.GEOFENCE_TRANSITION_DWELL && string.contains("Work"))
+                        smsManager.sendTextMessage("72201018", null,"wifi", null, null);
 
                     //TextView Txt2 = (TextView) findViewById(R.id.CurrentPosition);
                     //Txt2.setText(string);
@@ -241,63 +245,19 @@ public class MainActivity extends FragmentActivity implements
         return false;
     }
 
-    /**
-     * Stop sending data to the peer.
-     */
-    private void stopSending() {
-
-        Log.i(TAG, "Sending stopped.");
-        //mLogFragment.getLogView().appendToLog("stopped");
-    }
-
-    /**
-     * Start sending data to the peer.
-     */
-    private void startSending() {
-
-        String[] args = new String[2];
-
-        String IPStr = "Sending started at: ";
-
-        Log.i(TAG, IPStr);
-
-        new BackgroundActivity().execute(args);
-    }
-
-    protected void onStart() {
-        mGoogleApiClient.connect();
+     protected void onStart() {
+        if (!mGoogleApiClient.isConnected())    // just in case this is an onRestart()
+            mGoogleApiClient.connect();
         super.onStart();
     }
 
     protected void onStop() {
-        mGoogleApiClient.disconnect();
         super.onStop();
     }
 
-    /**
-     * Check whether the device is connected, and if so, whether the connection
-     * is wifi or mobile (it could be something else).
-     */
-    private void checkNetworkConnection() {
-        // BEGIN_INCLUDE(connect)
-        ConnectivityManager connMgr =
-                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeInfo = connMgr.getActiveNetworkInfo();
-        if (activeInfo != null && activeInfo.isConnected()) {
-            wifiConnected = activeInfo.getType() == ConnectivityManager.TYPE_WIFI;
-            mobileConnected = activeInfo.getType() == ConnectivityManager.TYPE_MOBILE;
-            if (wifiConnected) {
-                Log.i(TAG, getString(R.string.wifi_connection));
-            } else if (mobileConnected) {
-                Log.i(TAG, getString(R.string.mobile_connection));
-            }
-        } else {
-            Log.i(TAG, getString(R.string.no_wifi_or_mobile));
-        }
-        // END_INCLUDE(connect)
-
-        SmsManager smsManager = SmsManager.getDefault();
-        smsManager.sendTextMessage("30221982", null, "sms message", null, null);
+    protected void onDestroy() {
+        mGoogleApiClient.disconnect();
+        super.onDestroy();
     }
 
     /**
@@ -370,7 +330,6 @@ public class MainActivity extends FragmentActivity implements
         } else {
             //handleNewLocation(location);
         }
-        ;
     }
 
     @Override
@@ -380,7 +339,7 @@ public class MainActivity extends FragmentActivity implements
 
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
-
+        Log.i(TAG, "onConnectionFailed: Location services connect failed.");
     }
 
     @Override
@@ -397,18 +356,14 @@ public class MainActivity extends FragmentActivity implements
     @Override
     protected void onPause() {
         super.onPause();
+
+        // Do NOT disconnect at this point. We want the service to run while not in front.
         if (mGoogleApiClient.isConnected()) {
-            mGoogleApiClient.disconnect();
+        //    mGoogleApiClient.disconnect();
         }
+
+        // In future: maybe let receiver registered.
         unregisterReceiver(receiver);
-    }
-
-    public void onTest(View view) {
-        if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
-            mGoogleApiClient.disconnect();
-            mGoogleApiClient.connect();
-        }
-
     }
 
     public void onResult(Status status) {

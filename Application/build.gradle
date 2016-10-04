@@ -4,7 +4,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.3'
+        classpath 'com.android.tools.build:gradle:2.2.0'
     }
 }
 
@@ -38,8 +38,8 @@ android {
         applicationId "com.tbay.android.FrequentSMS"
         minSdkVersion 11
         targetSdkVersion 21
-        versionCode 102
-        versionName "1.02"
+        versionCode 103
+        versionName "1.03"
     }
 
     sourceSets {
