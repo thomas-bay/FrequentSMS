@@ -38,8 +38,8 @@ android {
         applicationId "com.tbay.android.FrequentSMS"
         minSdkVersion 11
         targetSdkVersion 21
-        versionCode 103
-        versionName "1.03"
+        versionCode 104
+        versionName "1.04"
     }
 
     sourceSets {

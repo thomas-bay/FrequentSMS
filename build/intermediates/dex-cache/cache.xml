@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="21.1.2"
-        sha1="757e9a6398ad19e8d511e74f91d586c8368828e4">
+        sha1="3a8fe3db2d7193d0782466aaf686d5da22a43138">
         <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_748957422a884d8341ac7ce1b2d30a1d0b27046c\classes.dex" />
     </item>
     <item
@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="21.1.2"
-        sha1="3e9c69ecc4aa2796598f07da6e5a2e7f00594fe1">
+        sha1="bafee34307b22a02a4125a2476535865f614b23b">
         <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_3cc58316b8dd17be94e3d1b307177931a3fb09fa\classes.dex" />
     </item>
     <item

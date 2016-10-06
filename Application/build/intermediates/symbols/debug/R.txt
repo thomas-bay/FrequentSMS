@@ -553,7 +553,7 @@ int layout abc_screen_toolbar 0x7f040013
 int layout abc_search_dropdown_item_icons_2line 0x7f040014
 int layout abc_search_view 0x7f040015
 int layout abc_simple_dropdown_hint 0x7f040016
-int layout sample_main 0x7f040017
+int layout layout 0x7f040017
 int layout support_simple_spinner_dropdown_item 0x7f040018
 int menu main 0x7f0e0000
 int mipmap ic_launcher2 0x7f030000

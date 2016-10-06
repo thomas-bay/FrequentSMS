@@ -16,9 +16,7 @@
 
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tbay.android.FrequentSMS"
-    android:versionCode="1"
-    android:versionName="1.1">
+    package="com.tbay.android.FrequentSMS">
 
     <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
     <uses-permission android:name="android.permission.INTERNET" />

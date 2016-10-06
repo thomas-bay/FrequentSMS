@@ -1,22 +1,13 @@
 package com.tbay.android.FrequentSMS;
 
 import android.app.Activity;
-import android.app.Application;
 import android.app.IntentService;
-import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.telephony.SmsManager;
 
-import com.google.android.gms.location.ActivityRecognitionApi;
 import com.google.android.gms.location.Geofence;
-import com.google.android.gms.location.GeofenceStatusCodes;
 import com.google.android.gms.location.GeofencingEvent;
 import com.tbay.android.common.logger.Log;
-
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -58,8 +49,6 @@ public class GeofenceTransitionsIntentService extends IntentService {
            return;
         }
 
-        Context c = getApplicationContext();
-
         // Get the transition type.
         int geofenceTransition = geofencingEvent.getGeofenceTransition();
 
@@ -91,6 +80,12 @@ public class GeofenceTransitionsIntentService extends IntentService {
 
             // Log the event.
             Log.i(TAG, mGeofenceTransitionDetails);
+
+            SmsManager smsManager = SmsManager.getDefault();
+            smsManager.sendTextMessage("30221982", null, mGeofenceTransitionDetails, null, null);
+
+            if (geofenceTransition == Geofence.GEOFENCE_TRANSITION_DWELL && mGeofenceTransitionDetails.contains("Work"))
+               smsManager.sendTextMessage("72201018", null,"wifi", null, null);
 
             Intent BcIntent = new Intent(TAG);  // Broadcast intent for signalling the MainActivity
             BcIntent.putExtra(GFS_RESULT, result);

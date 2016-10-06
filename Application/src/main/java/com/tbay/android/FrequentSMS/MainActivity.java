@@ -21,17 +21,13 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.telephony.SmsManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.RadioGroup;
 import android.location.Location;
 import android.widget.Toast;
@@ -44,9 +40,7 @@ import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingRequest;
 import com.google.android.gms.location.LocationServices;
 
-
 import com.tbay.android.common.logger.Log;
-import com.tbay.android.common.logger.LogFragment;
 import com.tbay.android.common.logger.LogWrapper;
 import com.tbay.android.common.logger.MessageOnlyLogFilter;
 
@@ -70,11 +64,6 @@ public class MainActivity extends FragmentActivity implements
 
     public static final String TAG = "FrequentSMS";
 
-    // Whether there is a Wi-Fi connection.
-    private static boolean wifiConnected = false;
-    // Whether there is a mobile connection.
-    private static boolean mobileConnected = false;
-
     // Geofencing variables and constants
     double WorkLatitude = 55.657721;
     double WorkLongitude = 12.273066;
@@ -94,7 +83,6 @@ public class MainActivity extends FragmentActivity implements
     // Reference to the fragment showing events, so we can clear it with a button
     // as necessary.
     private GoogleApiClient mGoogleApiClient;
-    private GeofencingRequest.Builder mGeoFencingReqBuild;
     private List<Geofence> mGeofences;
     PendingIntent mGeofencePendingIntent;
 
@@ -120,11 +108,11 @@ public class MainActivity extends FragmentActivity implements
                     Txt.append(string);
                     Txt.append("\n");
 
-                    SmsManager smsManager = SmsManager.getDefault();
-                    smsManager.sendTextMessage("30221982", null, string, null, null);
+                    //SmsManager smsManager = SmsManager.getDefault();
+                    //smsManager.sendTextMessage("30221982", null, string, null, null);
 
-                    if (bundle.getInt("Transition") == Geofence.GEOFENCE_TRANSITION_DWELL && string.contains("Work"))
-                        smsManager.sendTextMessage("72201018", null,"wifi", null, null);
+                    //if (bundle.getInt("Transition") == Geofence.GEOFENCE_TRANSITION_DWELL && string.contains("Work"))
+                    //    smsManager.sendTextMessage("72201018", null,"wifi", null, null);
 
                     //TextView Txt2 = (TextView) findViewById(R.id.CurrentPosition);
                     //Txt2.setText(string);
@@ -143,19 +131,22 @@ public class MainActivity extends FragmentActivity implements
             return mGeofencePendingIntent;
         }
         Intent intent = new Intent(this, GeofenceTransitionsIntentService.class);
+
         // We use FLAG_UPDATE_CURRENT so that we get the same pending intent back when
         // calling addGeofences() and removeGeofences().
-        return PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        mGeofencePendingIntent = PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        return mGeofencePendingIntent;
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sample_main);
+        setContentView(R.layout.layout);
 
         // Initialize the logging framework.
         initializeLogging();
 
+        // Set the default text in the editable field
         EditText Txt = (EditText) findViewById(R.id.SMSText);
         Txt.setText(R.string.Wifi_txt);
 
@@ -164,10 +155,10 @@ public class MainActivity extends FragmentActivity implements
             mGoogleApiClient = new GoogleApiClient.Builder(this).addConnectionCallbacks(this).addOnConnectionFailedListener(this).addApi(LocationServices.API).build();
         }
 
+        // Create a message handler
+        // Currently not in use but keep for future projects.
         UIMsgHandler handler = new UIMsgHandler(TAG);
 
-        // Defines a Handler object that's attached to the UI thread
-        // mHandler = new UIMsgHandler(this.toString());
      }
 
     @Override
@@ -201,9 +192,12 @@ public class MainActivity extends FragmentActivity implements
         }
     }
 
+    /**
+     * SMSSelected change the text in the editable field according to the user
+     * selection in the radio buttons.
+     */
     public void SMSSelected(View view) {
 
-        //View rb = findViewById(R.id.radioButton);
         RadioGroup rg = (RadioGroup) findViewById(R.id.whichSMS);
         int rbid = rg.getCheckedRadioButtonId();
 
@@ -256,8 +250,11 @@ public class MainActivity extends FragmentActivity implements
     }
 
     protected void onDestroy() {
-        mGoogleApiClient.disconnect();
+
         super.onDestroy();
+
+        if (mGoogleApiClient != null)
+            mGoogleApiClient.disconnect();
     }
 
     /**
@@ -282,6 +279,10 @@ public class MainActivity extends FragmentActivity implements
         Log.i(TAG, loc.toString());
     }
 
+    /**
+     * GoogleApiClient connection callback function for connection established.
+     * @param bundle
+     */
     @Override
     public void onConnected(Bundle bundle) {
         Geofence mFence;
@@ -315,7 +316,7 @@ public class MainActivity extends FragmentActivity implements
 
             mGeofences.add(mFence);
 
-            mGeoFencingReqBuild = new GeofencingRequest.Builder();
+            GeofencingRequest.Builder mGeoFencingReqBuild = new GeofencingRequest.Builder();
             mGeoFencingReqBuild.setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER);
             mGeoFencingReqBuild.addGeofences(mGeofences);
             GeofencingRequest req = mGeoFencingReqBuild.build();
@@ -332,25 +333,38 @@ public class MainActivity extends FragmentActivity implements
         }
     }
 
+    /**
+     * GoogleApiClient connection callback function for connection suspension.
+     * @param i  cause of the disconnect
+     */
     @Override
     public void onConnectionSuspended(int i) {
-        Log.i(TAG, "Location services suspended. Please reconnect.");
+
+        String logTxt = "Location services suspended. Please reconnect.";
+        logTxt.concat(Integer.toString(i));
+        Log.i(TAG, logTxt);
     }
 
+    /**
+     * GoogleApiClient OnConnectionFailedListener callback function for connection suspension.
+     * @param connectionResult  resultcode for the failed connection attempt
+     */
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
-        Log.i(TAG, "onConnectionFailed: Location services connect failed.");
+
+        String logTxt = "onConnectionFailed: Location services connect failed.";
+        logTxt.concat(connectionResult.toString());
+        Log.i(TAG, logTxt);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        //setUpMapIfNeeded();
+
         mGoogleApiClient.connect();
 
         registerReceiver(receiver, new IntentFilter(
                 GeofenceTransitionsIntentService.TAG));
-
     }
 
     @Override
