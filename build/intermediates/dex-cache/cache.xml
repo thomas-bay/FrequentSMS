@@ -3,6 +3,24 @@
 
     <item
         is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_00e938699801b49c7e3efe8639c41037ee120a46\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="af7582c6b327449c6d32518e6a10307860b7b5d6">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.6.1_3d9b11666dd1ee613d35bbb824c7e4662ff6f845\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -12,21 +30,120 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-21.0.3_389e7d97e330bfa8ab8f2274b6646c9a0046e756\classes.dex" />
+        revision="23.0.1"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_304af03b775c5693919f23a2ae8e087be94709ae\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Thomas\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.6.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-21.0.3_e20fe9ce6c176e81c17db02969726e2bb90560a4\classes.dex" />
+        revision="23.0.1"
+        sha1="f8db47be01cbe8cfa81e9cecce5ff1371ed1ad95">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-9.6.1_a927943aaa674f3372dd355634bd57654a9e17e0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ff9be0a1e75a21c372735930d8987a55b5e6065f">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-9.6.1_1f71db9eb8a837abaadf0f61632b631bdf034457\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_a71b8e8caa8b5035ded3805957d9210b9673b5ce\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f0e96478ca3147bc588aadb9ae467d85b42473cc">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-9.6.1_96556df33b7c64520593182242174463e2b464a5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b75ecdd04a37d31b4a0da2729fc5c558962a529b">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.6.1_3c148564e5251442b5b153ca477c9ec355db5273\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c4394d46152165cd3256fb711ac94f66a28fbae1">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-9.6.1_f72cc68096068742170b39c072d59e7bde3f1720\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2a18547ea91d258866d132c2a763185f15b01b25">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.6.1_0f1219129d0b165e806fd6499a47546395c566f6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ad7706f8bb4a985656a8d2142f74021c8b0e03d8">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-9.6.1_e1a1882e3cafb0a4f12bdaca437eca209bbaab8c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a76a6983a23788b3689524d4bed763955afbd306">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-fitness-9.6.1_e83b94a41caa6b097f59e9494e7a5ebac43ffb18\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_50c1af2c399d1bfe369ae1611473f9252b246f47\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0e0e0681c26a1f575d3e4c542182dd59bab75fd6">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-9.6.1_6aca6db3a130397cff1a40d8134eee4be7a89f52\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="da3f763afd39da1c947d9442847c837e9182a09f">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-9.6.1_e370bb14fd794ad677dc2b84890c4b719849039b\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -39,30 +156,489 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.5.87\jars\classes.jar"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.6.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="21.1.2"
-        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-6.5.87_dafa37cb5856e8a636dd65a26736693f7cd6e165\classes.dex" />
+        revision="23.0.1"
+        sha1="526f4b02f1771fa7607ff1b89fe2e9bd0344fee8">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-9.6.1_6f0baa0a2edc6592cf3d8af64848b0bd3029e5d7\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.6.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-21.0.3_a23c553b0bac30286be5d181b561f45b941464da\classes.dex" />
+        revision="23.0.1"
+        sha1="6ffe8b28ab61e5ee92ab9431a220379790c71ddf">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.6.1_8c2a9093eca1bf0a508b37fedac9ea632889a727\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-21.0.3_cea6993f030f482e6cc9c483f22012e46cfbbac7\classes.dex" />
+        revision="23.0.1"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_c34853f9c7867fd2dfbbe1d704fd1427ee5532ae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="465f40f840e583f8b7421a3aacf3fbf08c28f00a">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-9.6.1_c0f77fef3f82c369bbd56bf0572c3be641afb034\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_2711c8b6cb232de3b0f6bc0b1d9128c329469c07\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_c315691769a363c72e042b6a9cc254798f943979\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-instantapps\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="babb25794a7599069d34705038744c5760a9a88c">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-instantapps-9.6.1_75c3eb5e444bbbba1d5837c25b2da80de80f4aad\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ac8365c87591065db07f7bac8551504504832cd4">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.6.1_01a9df646a9d3ebf75e05c6b43adfcda3ac8a8c5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8ebae43cd06058e99e08c8b4d305b72f2b9927c6">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-9.6.1_1e625c3527ff031bafc6984782c8ce35103c9ee0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f6aa7c76cbaa867e05dbad0afab1ef0e65c4e55f">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-nearby-9.6.1_9c4973dd901139dc465783b2bec0403142bc2789\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast-framework\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9c0cf3d4f9d7d076f301e110b92e18ae23da12c2">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-framework-9.6.1_93f16c91dd044eaecc616f3c06ed1b65607aca90\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_54b12fd496272aa2e443a04f3c6f71c047a32534\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="159494eb362396d073d8c922b77e40c0da5fc5bc">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-common-9.6.1_c60461fdccfa764a59630b56ac5d3a395da60c6c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1810ae0df0a1b9b539ce97df54e96f2bf8f5ff94">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-9.6.1_4e07889daf55c5c41c16942fb8077150d66c8c5a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c828add497d2b7a3de7c047bf72050cd4b7521a1">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-safetynet-9.6.1_4425b36c152a2b2390d977544daa207c2ba66650\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="4a36600281a648769411ef642c331851732bf29e">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.6.1_7b7b4d5e27f83ae55e2420d77e368bb2b184d58f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="77558e74bb2056ef38516296f13a27c4c4fc3e5c">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.6.1_ea9d1e63dd1570a4250091dcc8fdc08a8326fcf1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_7f045a5707d188b70daa57a91280111e14d411f4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cc39b4bcc9e7062891db90d5a752fa9e4986f447">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-9.6.1_584d7ffda0b3a5527e789402e8521a3ba7ff453a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="47bbb3ec4b31ba71e125241c090dabe70cbb4de7">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-9.6.1_0f192e99ead535887c4ddae3edf195d8e5b7567f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_e91cdd63f8df519bc6ef097d090f3d7346b5d5e3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="518adc52081d41724932b41bc132e4d50a352b86">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-9.6.1_048281cb41fb2468fd7ec0ed5d763b6966c64caf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a136366045678579300d161de97c2211c4c4f7a0">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-9.6.1_e8097a29fadbbf93a2e57244d5603a4ba20cbc48\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0cae6511c5705869cacf199f8abb0ea84cd10157">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-9.6.1_0be00d18442807276ae77a88c2e08f0a51eb3894\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6ff796a3173787afe2e712f3aec6f5b99796118e">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-lite-9.6.1_1fc7d0157aff152a6b5d92da9b3f5bd3404d3066\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="79f521967ad7f49b34748db89df02852c2b2f87b">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-9.6.1_b8885a34bc0e06dace020fa6015a550e9ffd3875\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a1c351dc10b92d638da57f3a6513f87cfbdc9f83">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-9.6.1_dd29493343a1abb8802f869574d14dad134f76ff\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-places\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cdddf21e0a8205e9955661061d1735ed10e44a7b">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-places-9.6.1_77ba9a5de651f3664d4353871052dfddf8ce0037\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="4df40545c9b875855f3dd9d4928e5d07f07c20ba">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-crash-9.6.1_a4e2cd190bb3b7e9660919c7724eec2407697892\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_0cfaf2daf7925d3740c27a5580aac6c393d492b0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_aac0e60e0ecd23da8d5a4b37e10a8b04fe380d9d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8c6ef5bd4072f8cda2b89d8356ea7d8acd0683aa">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-9.6.1_80f0a9764e2f8540bb6c049295bb49101c6107e0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1ef72e72bc0d05602c366582afa9439f58bb31d6">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.6.1_89d6eff7cf7d78554942b7651d98966b1e4ad3bd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-mediarouter-v7-24.0.0_b3a83d5db223522200c3fa7d0f8b53b4b53d97da\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_f2fc999bac40461b1df8726530835af007484db2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-24.0.0_cb94c8d037600c22e9bd10c7dc962f1ceb6b36d6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="13de8ebf67e03bf87340a4f15407621e878706bc">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_748957422a884d8341ac7ce1b2d30a1d0b27046c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_3a9d07923b68ed8d894ab0474020e37747c93321\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a53ac0560ab915a02c50d2e5c7b003381e6fb5e3">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-impl-9.6.1_6fbd4129fccd01076cbfefc10eb0db0dc6ba96ad\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="62ff84124b89177abc0c27f3e38c9732f2d41617">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-9.6.1_eb79adae8a2ea4c17b6c92fb602facb958938438\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d45c048bb1c55cf963899190e507065aea8e5be9">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-games-9.6.1_e6312f151efeef0b8af443d4589619fd1eea0267\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dfcba20b85ef3669a8ced0a8760a6df281cbd7c7">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-9.6.1_9c97b3761c6c3e0a2e17703c677cda5e6ac1553f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.6.1_09fbea40be5715267a638785185f619f97621070\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1e14ebe1cda8491f152083e752ca5bf73cd37bff">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.6.1_299505eb7546733f5d5dd3a37ce24b5073d069d2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b86d79166ac9195c9aaa34dc2d0f8f14c484ddb9">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_3cc58316b8dd17be94e3d1b307177931a3fb09fa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_b0821db235a991a3eef5e3246166240ebac09f84\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ee0ccb43f6ab276191b7f2d77c305fa9beb26db9">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-clearcut-9.6.1_6dbaea20e55426ad2a8769ee6de293c0611a6335\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0efd1b44f47c134fb245914a1d54a55adbfc2f8d">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.6.1_b42e4836d9fccd2bcd7f346ad5ccff52b5139adc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ee61ace5f3e488fc610e1c67693c49186a441f32">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gass-9.6.1_f142b8c674145a0ebdc0a9e3c38598a3bc2f9c2e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-awareness\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="90be14317e3f26d18438e8dbf8544500d1dfe07f">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-awareness-9.6.1_1729274305a89c80eca3964bc39e00db1443bc17\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_29cf9641b9dd2699c9aa731c248979cfdee8deaa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cf2c4e6607c77b0e671dc5ca252c5ea0d9c1ce0d">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-config-9.6.1_cdbd7d12d45ef8146ba541fc691ed99a8b13910c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0dfc12e4aacf514346ea866560c99807d032bc48">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-iid-9.6.1_c1a5cd1a545c5137d2c1e94701ca30b1ccc2536c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="80dd8bea08bc5fe10b10a3243b8279c856ccc690">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-messaging-9.6.1_e3b559cb1b0f887d27d815106d7bd298166ce926\classes.dex" />
     </item>
 
 </items>
