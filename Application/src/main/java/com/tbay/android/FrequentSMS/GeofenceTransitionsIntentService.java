@@ -82,10 +82,10 @@ public class GeofenceTransitionsIntentService extends IntentService {
             Log.i(TAG, mGeofenceTransitionDetails);
 
             SmsManager smsManager = SmsManager.getDefault();
-            smsManager.sendTextMessage("30221982", null, mGeofenceTransitionDetails, null, null);
+            smsManager.sendTextMessage(AppConstants.phonePrivate, AppConstants.phoneWork, mGeofenceTransitionDetails, null, null);
 
             if (geofenceTransition == Geofence.GEOFENCE_TRANSITION_DWELL && mGeofenceTransitionDetails.contains("Work"))
-               smsManager.sendTextMessage("72201018", null,"wifi", null, null);
+               smsManager.sendTextMessage(AppConstants.phoneWifi, AppConstants.phoneWork, AppConstants.txtWifi, null, null);
 
             Intent BcIntent = new Intent(TAG);  // Broadcast intent for signalling the MainActivity
             BcIntent.putExtra(GFS_RESULT, result);

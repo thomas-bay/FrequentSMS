@@ -24,20 +24,23 @@
 
     <RadioGroup
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="706dp"
         android:layout_gravity="left|bottom"
         android:visibility="visible"
-        android:id="@+id/whichSMS">
+        android:id="@+id/whichSMS"
+        android:layout_margin="5dp">
 
         <RadioButton
-            android:layout_width="wrap_content"
+            android:layout_width="123dp"
             android:layout_height="wrap_content"
             android:text="TI Wifi "
             android:id="@+id/Wifi"
             android:layout_gravity="left|top"
             android:checked="true"
             android:nestedScrollingEnabled="false"
-            android:onClick="SMSSelected" />
+            android:onClick="SMSSelected"
+            android:layout_margin="5dp"
+            android:drawablePadding="50dp" />
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -46,53 +49,71 @@
             android:id="@+id/Aftensmad"
             android:layout_gravity="left|bottom"
             android:checked="false"
-            android:onClick="SMSSelected" />
+            android:onClick="SMSSelected"
+            android:layout_margin="5dp"
+            android:drawablePadding="5dp" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Er snart hjemme"
             android:id="@+id/Snart_hjemme"
-            android:onClick="SMSSelected" />
+            android:onClick="SMSSelected"
+            android:layout_margin="5dp"
+            android:drawablePadding="5dp" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Send test SMS"
             android:id="@+id/TestSMS"
-            android:onClick="SMSSelected" />
+            android:onClick="SMSSelected"
+            android:layout_margin="5dp"
+            android:drawablePadding="5dp" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="59dp"
+            android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:ems="10"
             android:id="@+id/SMSText" />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="168dp"
+            android:layout_height="63dp"
             android:text="Send SMS"
             android:id="@+id/button"
             android:layout_gravity="center_horizontal"
-            android:onClick="sendSMS" />
+            android:onClick="sendSMS"
+            android:elevation="3dp" />
 
-        <EditText
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="textMultiLine|textNoSuggestions"
-            android:ems="10"
-            android:selectAllOnFocus="false"
-            android:id="@+id/Position2"
-            android:scrollbars="vertical"
-            android:focusableInTouchMode="false"
-            android:focusable="false"
-            android:textSize="14sp"
-            android:editable="false"
-            android:scrollbarAlwaysDrawVerticalTrack="true"
-            android:verticalScrollbarPosition="right"
-            android:visibility="visible"
-            android:enabled="true" />
+            android:layout_height="30dp">
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:ems="10"
+                android:selectAllOnFocus="false"
+                android:id="@+id/Position2"
+                android:scrollbars="vertical"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:textSize="14sp"
+                android:editable="false"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:verticalScrollbarPosition="right"
+                android:visibility="visible"
+                android:enabled="true"
+                android:layout_height="366dp" />
+        </ScrollView>
 
     </RadioGroup>
 

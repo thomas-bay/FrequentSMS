@@ -21,7 +21,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.telephony.SmsManager;
 import android.view.Menu;
@@ -48,7 +50,6 @@ import java.util.List;
 import java.util.ArrayList;
 
 
-
 /**
  * Sample application demonstrating how to test whether a device is connected,
  * and if so, whether the connection happens to be wifi or mobile (it could be
@@ -65,20 +66,7 @@ public class MainActivity extends FragmentActivity implements
     public static final String TAG = "FrequentSMS";
 
     // Geofencing variables and constants
-    double WorkLatitude = 55.657721;
-    double WorkLongitude = 12.273066;
-    float WorkRadius = (float) 200.0;
-    String WorkFenceId = "Workplace";
-
-    double HomeLatitude = 55.747748;
-    double HomeLongitude = 12.388965;
-    float HomeRadius = (float) 100.0;
-    String HomeFenceId = "Home";
-
-    double BibloLatitude = 55.729438;
-    double BibloLongitude = 12.359988;
-    float BibloRadius = (float) 100.0;
-    String LibraryId = "Biblo";
+    // See class AppConstants
 
     // Reference to the fragment showing events, so we can clear it with a button
     // as necessary.
@@ -96,9 +84,6 @@ public class MainActivity extends FragmentActivity implements
                 String string = bundle.getString(GeofenceTransitionsIntentService.GFS_DETAILS);
                 int resultCode = bundle.getInt(GeofenceTransitionsIntentService.GFS_RESULT);
                 if (resultCode == RESULT_OK) {
-                    /*Toast.makeText(MainActivity.this,
-                            "New GeoEvent: " + string,
-                            Toast.LENGTH_LONG).show();*/
 
                     Log.i(TAG, string);
 
@@ -108,15 +93,6 @@ public class MainActivity extends FragmentActivity implements
                     Txt.append(string);
                     Txt.append("\n");
 
-                    //SmsManager smsManager = SmsManager.getDefault();
-                    //smsManager.sendTextMessage("30221982", null, string, null, null);
-
-                    //if (bundle.getInt("Transition") == Geofence.GEOFENCE_TRANSITION_DWELL && string.contains("Work"))
-                    //    smsManager.sendTextMessage("72201018", null,"wifi", null, null);
-
-                    //TextView Txt2 = (TextView) findViewById(R.id.CurrentPosition);
-                    //Txt2.setText(string);
-
                 } else {
                     Toast.makeText(MainActivity.this, "Download failed",
                             Toast.LENGTH_LONG).show();
@@ -125,6 +101,10 @@ public class MainActivity extends FragmentActivity implements
         }
     };
 
+    /**
+     * Creates Intent if not already existing. Same intent is used for all fences.
+     * @return Return the intent to call when position is within geofence
+     */
     private PendingIntent getGeofencePendingIntent() {
         // Reuse the PendingIntent if we already have it.
         if (mGeofencePendingIntent != null) {
@@ -140,10 +120,21 @@ public class MainActivity extends FragmentActivity implements
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout);
 
         // Initialize the logging framework.
+        // Check if permissions are set, otherwise exit app.
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+            Toast.makeText(MainActivity.this, "Please set ACCESS_FINE_LOCATION permission",
+                    Toast.LENGTH_LONG).show();
+
+            finish();
+            return;
+        }
+
         initializeLogging();
 
         // Set the default text in the editable field
@@ -159,7 +150,7 @@ public class MainActivity extends FragmentActivity implements
         // Currently not in use but keep for future projects.
         UIMsgHandler handler = new UIMsgHandler(TAG);
 
-     }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -178,16 +169,16 @@ public class MainActivity extends FragmentActivity implements
 
         switch (rbid) {
             case R.id.Wifi:
-                smsManager.sendTextMessage("72201018", null, Txt.getText().toString(), null, null);
+                smsManager.sendTextMessage(AppConstants.phoneWifi, null, Txt.getText().toString(), null, null);
                 break;
             case R.id.Aftensmad:
-                smsManager.sendTextMessage("30223796", null, Txt.getText().toString(), null, null);
+                smsManager.sendTextMessage(AppConstants.phoneAnnette, null, Txt.getText().toString(), null, null);
                 break;
             case R.id.TestSMS:
-                smsManager.sendTextMessage("30221982", null, Txt.getText().toString(), null, null);
+                smsManager.sendTextMessage(AppConstants.phonePrivate, null, Txt.getText().toString(), null, null);
                 break;
             case R.id.Snart_hjemme:
-                smsManager.sendTextMessage("30223796", null, Txt.getText().toString(), null, null);
+                smsManager.sendTextMessage(AppConstants.phoneAnnette, null, Txt.getText().toString(), null, null);
                 break;
         }
     }
@@ -204,16 +195,16 @@ public class MainActivity extends FragmentActivity implements
         EditText Txt = (EditText) findViewById(R.id.SMSText);
         switch (rbid) {
             case R.id.Wifi:
-                Txt.setText(R.string.Wifi_txt);
+                Txt.setText(AppConstants.txtWifi);
                 break;
             case R.id.Aftensmad:
-                Txt.setText("Skal jeg købe noget med på vejen hjem?");
+                Txt.setText(AppConstants.txtShopping);
                 break;
             case R.id.TestSMS:
-                Txt.setText(R.string.TestSMS_txt);
+                Txt.setText(AppConstants.txtTestSMS);
                 break;
             case R.id.Snart_hjemme:
-                Txt.setText(R.string.Hjemme_txt);
+                Txt.setText(AppConstants.txtHomeSoon);
         }
     }
 
@@ -239,7 +230,7 @@ public class MainActivity extends FragmentActivity implements
         return false;
     }
 
-     protected void onStart() {
+    protected void onStart() {
         if (!mGoogleApiClient.isConnected())    // just in case this is an onRestart()
             mGoogleApiClient.connect();
         super.onStart();
@@ -285,31 +276,30 @@ public class MainActivity extends FragmentActivity implements
      */
     @Override
     public void onConnected(Bundle bundle) {
-        Geofence mFence;
         Log.i(TAG, "Location services connected.");
 
         // Create an instance of Geofence.
         if (mGeofences == null) {
             mGeofences = new ArrayList<Geofence>();
 
-            mFence = new Geofence.Builder().setRequestId(HomeFenceId)
-                    .setCircularRegion(HomeLatitude, HomeLongitude, HomeRadius)
+            Geofence mFence = new Geofence.Builder().setRequestId(AppConstants.HomeFenceId)
+                    .setCircularRegion(AppConstants.HomeLatitude, AppConstants.HomeLongitude, AppConstants.HomeRadius)
                     .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER | Geofence.GEOFENCE_TRANSITION_DWELL | Geofence.GEOFENCE_TRANSITION_EXIT)
                     .setLoiteringDelay(20000)
                     .setExpirationDuration(Geofence.NEVER_EXPIRE).build();
 
             mGeofences.add(mFence);
 
-            mFence = new Geofence.Builder().setRequestId(WorkFenceId)
-                    .setCircularRegion(WorkLatitude, WorkLongitude, WorkRadius)
+            mFence = new Geofence.Builder().setRequestId(AppConstants.WorkFenceId)
+                    .setCircularRegion(AppConstants.WorkLatitude, AppConstants.WorkLongitude, AppConstants.WorkRadius)
                     .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_DWELL)
                     .setLoiteringDelay(20000)
                     .setExpirationDuration(Geofence.NEVER_EXPIRE).build();
 
             mGeofences.add(mFence);
 
-            mFence = new Geofence.Builder().setRequestId(LibraryId)
-                    .setCircularRegion(BibloLatitude, BibloLongitude, BibloRadius)
+            mFence = new Geofence.Builder().setRequestId(AppConstants.LibraryId)
+                    .setCircularRegion(AppConstants.BibloLatitude, AppConstants.BibloLongitude, AppConstants.BibloRadius)
                     .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER | Geofence.GEOFENCE_TRANSITION_DWELL | Geofence.GEOFENCE_TRANSITION_EXIT)
                     .setLoiteringDelay(20000)
                     .setExpirationDuration(Geofence.NEVER_EXPIRE).build();
@@ -317,11 +307,11 @@ public class MainActivity extends FragmentActivity implements
             mGeofences.add(mFence);
 
             GeofencingRequest.Builder mGeoFencingReqBuild = new GeofencingRequest.Builder();
-            mGeoFencingReqBuild.setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER);
+            mGeoFencingReqBuild.setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_DWELL);
             mGeoFencingReqBuild.addGeofences(mGeofences);
             GeofencingRequest req = mGeoFencingReqBuild.build();
 
-            LocationServices.GeofencingApi.addGeofences(mGoogleApiClient, mGeofences, getGeofencePendingIntent()).setResultCallback(this);
+            LocationServices.GeofencingApi.addGeofences(mGoogleApiClient, req, getGeofencePendingIntent()).setResultCallback(this);
         }
 
         Location location = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
@@ -346,7 +336,8 @@ public class MainActivity extends FragmentActivity implements
     }
 
     /**
-     * GoogleApiClient OnConnectionFailedListener callback function for connection suspension.
+     * GoogleApiClient OnConnectionFailedListener callback function for connection failed.
+     * This function is called if call to GoogleApiClient().connect() fails.
      * @param connectionResult  resultcode for the failed connection attempt
      */
     @Override
@@ -382,12 +373,6 @@ public class MainActivity extends FragmentActivity implements
 
     public void onResult(Status status) {
         if (status.isSuccess()) {
-        /*    Toast.makeText(
-                    this,
-                    "Geofences Added",
-                    Toast.LENGTH_SHORT
-            ).show();
-        */
         } else {
             // Get the status code for the error and log it using a user-friendly message.
             String errorMessage = "ged";// GeofenceErrorMessages.getErrorString(this, status.getStatusCode());
