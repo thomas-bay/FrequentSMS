@@ -21,11 +21,13 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.telephony.SmsManager;
+import android.text.Selection;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -125,6 +127,8 @@ public class MainActivity extends FragmentActivity implements
         setContentView(R.layout.layout);
 
         // Initialize the logging framework.
+        initializeLogging();
+
         // Check if permissions are set, otherwise exit app.
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
@@ -135,11 +139,14 @@ public class MainActivity extends FragmentActivity implements
             return;
         }
 
-        initializeLogging();
+        // Get selection from shared Preferences. The preference is set when selecting a radiobutton.
+        // Then set the text in the editable field to the last selected text (currently a default text)
+        SharedPreferences mPref = getSharedPreferences("com.tbay.android.FrequentSMS.PREFS", MODE_PRIVATE);
+        int SelectionId = mPref.getInt("LASTSELECTION", 0);
 
-        // Set the default text in the editable field
-        EditText Txt = (EditText) findViewById(R.id.SMSText);
-        Txt.setText(R.string.Wifi_txt);
+        RadioGroup rg = (RadioGroup) findViewById(R.id.whichSMS);
+        rg.check(SelectionId);
+        setText(SelectionId);
 
         // Create an instance of GoogleAPIClient.
         if (mGoogleApiClient == null) {
@@ -149,7 +156,6 @@ public class MainActivity extends FragmentActivity implements
         // Create a message handler
         // Currently not in use but keep for future projects.
         UIMsgHandler handler = new UIMsgHandler(TAG);
-
     }
 
     @Override
@@ -183,6 +189,29 @@ public class MainActivity extends FragmentActivity implements
         }
     }
 
+
+    /**
+     * setText change the text in the editable field according to the id
+     * in argument.
+     */
+    public void setText(int id) {
+
+        EditText Txt = (EditText) findViewById(R.id.SMSText);
+        switch (id) {
+            case R.id.Wifi:
+                Txt.setText(AppConstants.txtWifi);
+                break;
+            case R.id.Aftensmad:
+                Txt.setText(AppConstants.txtShopping);
+                break;
+            case R.id.TestSMS:
+                Txt.setText(AppConstants.txtTestSMS);
+                break;
+            case R.id.Snart_hjemme:
+                Txt.setText(AppConstants.txtHomeSoon);
+        }
+    }
+
     /**
      * SMSSelected change the text in the editable field according to the user
      * selection in the radio buttons.
@@ -206,6 +235,12 @@ public class MainActivity extends FragmentActivity implements
             case R.id.Snart_hjemme:
                 Txt.setText(AppConstants.txtHomeSoon);
         }
+
+        // Save time for SMS transmission in preferences
+        SharedPreferences mPref = getSharedPreferences("com.tbay.android.FrequentSMS.PREFS", MODE_PRIVATE);
+        SharedPreferences.Editor editor = mPref.edit();
+        editor.putInt("LASTSELECTION", rbid);
+        editor.commit();
     }
 
     @Override
@@ -284,8 +319,8 @@ public class MainActivity extends FragmentActivity implements
 
             Geofence mFence = new Geofence.Builder().setRequestId(AppConstants.HomeFenceId)
                     .setCircularRegion(AppConstants.HomeLatitude, AppConstants.HomeLongitude, AppConstants.HomeRadius)
-                    .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER | Geofence.GEOFENCE_TRANSITION_DWELL | Geofence.GEOFENCE_TRANSITION_EXIT)
-                    .setLoiteringDelay(20000)
+                    .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_DWELL)
+                    .setLoiteringDelay(60000)
                     .setExpirationDuration(Geofence.NEVER_EXPIRE).build();
 
             mGeofences.add(mFence);
@@ -293,7 +328,7 @@ public class MainActivity extends FragmentActivity implements
             mFence = new Geofence.Builder().setRequestId(AppConstants.WorkFenceId)
                     .setCircularRegion(AppConstants.WorkLatitude, AppConstants.WorkLongitude, AppConstants.WorkRadius)
                     .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_DWELL)
-                    .setLoiteringDelay(20000)
+                    .setLoiteringDelay(60000)
                     .setExpirationDuration(Geofence.NEVER_EXPIRE).build();
 
             mGeofences.add(mFence);

@@ -16,8 +16,8 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tbay.android.FrequentSMS"
-    android:versionCode="104"
-    android:versionName="1.04" >
+    android:versionCode="108"
+    android:versionName="1.08" >
 
     <uses-sdk
         android:minSdkVersion="11"
