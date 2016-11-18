@@ -27,11 +27,15 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.telephony.SmsManager;
-import android.text.Selection;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ContextMenu;
+import android.view.MenuInflater;
+
+import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.location.Location;
 import android.widget.Toast;
@@ -96,7 +100,7 @@ public class MainActivity extends FragmentActivity implements
                     Txt.append("\n");
 
                 } else {
-                    Toast.makeText(MainActivity.this, "Download failed",
+                    Toast.makeText(MainActivity.this, "Broadcast receiver result not OK",
                             Toast.LENGTH_LONG).show();
                 }
             }
@@ -156,6 +160,40 @@ public class MainActivity extends FragmentActivity implements
         // Create a message handler
         // Currently not in use but keep for future projects.
         UIMsgHandler handler = new UIMsgHandler(TAG);
+
+        // Register context menu for radio button group
+        registerForContextMenu(rg);
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.smseditmenu, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        switch (item.getItemId()) {
+            case R.id.edit:
+                //editNote(info.id);
+                return true;
+            case R.id.show:
+                RadioGroup rg = (RadioGroup) findViewById(R.id.whichSMS);
+                int rbid = rg.getCheckedRadioButtonId();
+
+                RadioButton rb = (RadioButton) findViewById(rbid);
+
+                int position = rg.indexOfChild(rb);
+
+                Toast.makeText(MainActivity.this, "Telefon nummer: " + Integer.toString(position),
+                        Toast.LENGTH_LONG).show();
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
     }
 
     @Override

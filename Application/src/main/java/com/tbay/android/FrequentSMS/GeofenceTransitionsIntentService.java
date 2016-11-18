@@ -117,7 +117,7 @@ public class GeofenceTransitionsIntentService extends IntentService {
                 else
                 {
                     // Temporary debug
-                    smsManager.sendTextMessage(AppConstants.phonePrivate, AppConstants.phoneWork, "Deferred wifi SMS. Too early.", null, null);
+                    // smsManager.sendTextMessage(AppConstants.phonePrivate, AppConstants.phoneWork, "Deferred wifi SMS. Too early.", null, null);
                 }
             }
 

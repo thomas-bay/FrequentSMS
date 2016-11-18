@@ -16,8 +16,8 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tbay.android.FrequentSMS"
-    android:versionCode="108"
-    android:versionName="1.08" >
+    android:versionCode="109"
+    android:versionName="1.09" >
 
     <uses-sdk
         android:minSdkVersion="11"
@@ -53,7 +53,8 @@
         <activity
             android:name="com.tbay.android.FrequentSMS.MainActivity"
             android:label="@string/app_name"
-            android:uiOptions="splitActionBarWhenNarrow" >
+            android:uiOptions="splitActionBarWhenNarrow"
+            android:windowSoftInputMode="stateHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -144,13 +145,6 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             android:authorities="com.tbay.android.FrequentSMS.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
-
-        <service
-            android:name="com.google.firebase.crash.internal.service.FirebaseCrashReceiverService"
-            android:process=":background_crash" />
-        <service
-            android:name="com.google.firebase.crash.internal.service.FirebaseCrashSenderService"
-            android:process=":background_crash" />
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"

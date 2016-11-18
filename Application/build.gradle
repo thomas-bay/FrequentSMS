@@ -15,10 +15,10 @@ repositories {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.android.support:support-v4:25.0.0'
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.google.android.gms:play-services:9.6.1'
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.google.android.gms:play-services:9.8.0'
 }
 
 // The sample build uses multiple directories to
@@ -31,14 +31,14 @@ List<String> dirs = [
 
 android {
     compileSdkVersion 23
-    buildToolsVersion '23.0.1'
+    buildToolsVersion '23.0.3'
 
     defaultConfig {
         applicationId "com.tbay.android.FrequentSMS"
         minSdkVersion 11
         targetSdkVersion 24
-        versionCode 108
-        versionName "1.08"
+        versionCode 109
+        versionName "1.09"
     }
 
     sourceSets {

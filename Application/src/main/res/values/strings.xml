@@ -31,4 +31,8 @@
     <string name="Indkøb">Er der noget jeg skal købe med på vejen hjem?</string>
     <string name="geofence_transition_invalid_type">Geofence invalid transition type</string>
 
+    <string name="EditMenuItem">Edit item</string>
+    <string name="ShowMenuItem">Show</string>
+
+
 </resources>
