@@ -2,11 +2,8 @@ package com.tbay.android.FrequentSMS;
 
 import android.app.Activity;
 import android.app.IntentService;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.telephony.SmsManager;
 
 import com.google.android.gms.location.Geofence;
@@ -30,7 +27,7 @@ public class GeofenceTransitionsIntentService extends IntentService {
      * @param name Used to name the worker thread, important only for debugging.
      */
 
-    protected static final String TAG = "GeofenceTransitionsIS";
+    protected static final String TAG = "FrequentSMS:GeoIS";
     static final String GFS_RESULT = "result";
     static final String GFS_TRANSITION = "Transition";
     static final String GFS_DETAILS = "Details";
@@ -107,7 +104,19 @@ public class GeofenceTransitionsIntentService extends IntentService {
 
                 if ((currentTimeMillis() - mTimeLastWifiSMS) > AppConstants.WorkLatency)
                 {
-                    smsManager.sendTextMessage(AppConstants.phoneWifi, AppConstants.phoneWork, AppConstants.txtWifi, null, null);
+
+                    Log.i(TAG, AppConstants.phoneWifi);
+                    Log.i(TAG, AppConstants.phoneWork);
+                    Log.i(TAG, AppPreferences.Key1_Msg);
+
+                    try
+                    {
+                        smsManager.sendTextMessage(AppConstants.phoneWifi, AppConstants.phoneWork, AppPreferences.Key1_Msg, null, null);
+                    }
+                    catch (Exception e)
+                    {
+                        Log.i(TAG, e.getMessage());
+                    }
 
                     // Save time for SMS transmission in preferences
                     SharedPreferences.Editor editor = mPref.edit();
@@ -121,7 +130,10 @@ public class GeofenceTransitionsIntentService extends IntentService {
                 }
             }
 
-            Intent BcIntent = new Intent(TAG);  // Broadcast intent for signalling the MainActivity
+            Intent BcIntent = new Intent("com.tbay.android.FrequentSMS.MAIN_ACTIVITY_INFO");  // Broadcast intent for signalling the MainActivity
+
+            //BcIntent.setAction("com.android.tbay.MAIN_ACTIVITY_INFO");
+
             BcIntent.putExtra(GFS_RESULT, result);
             BcIntent.putExtra(GFS_TRANSITION, geofenceTransition);
 

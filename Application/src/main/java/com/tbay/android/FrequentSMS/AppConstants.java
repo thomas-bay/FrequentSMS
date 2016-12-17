@@ -33,12 +33,6 @@ public final class AppConstants {
     static final String phoneWork = "+4572201214";
     static final String phoneWifi = "+4572201018";
 
-    // Text constants
-    static final String txtWifi = "Wifi";
-    static final String txtShopping = "Skal jeg købe noget med på vejen hjem?";
-    static final String txtTestSMS = "Dette er en test SMS";
-    static final String txtHomeSoon = "Jeg er hjemme om et kvarter";
-
     private AppConstants(){
         throw new AssertionError();
     }

@@ -17,11 +17,7 @@
 package com.tbay.android.FrequentSMS;
 
 import android.app.PendingIntent;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -57,9 +53,10 @@ import java.util.ArrayList;
 
 
 /**
- * Sample application demonstrating how to test whether a device is connected,
- * and if so, whether the connection happens to be wifi or mobile (it could be
- * something else).
+ * Application implement several functions:
+ *  - A 1-click method of sending a user defined TextMessage to one or more numbers.
+ *  - The messages and numbers are user editable.
+ *  - Automatic transmission of a user definable TextMessage when entering a specific geographic area.
  *
  * This sample uses the logging framework to display log output in the log
  * fragment (LogFragment).
@@ -79,33 +76,8 @@ public class MainActivity extends FragmentActivity implements
     private GoogleApiClient mGoogleApiClient;
     private List<Geofence> mGeofences;
     PendingIntent mGeofencePendingIntent;
-
-    private BroadcastReceiver receiver = new BroadcastReceiver() {
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            Bundle bundle = intent.getExtras();
-            if (bundle != null) {
-                String time = bundle.getString(GeofenceTransitionsIntentService.GFS_TIME);
-                String string = bundle.getString(GeofenceTransitionsIntentService.GFS_DETAILS);
-                int resultCode = bundle.getInt(GeofenceTransitionsIntentService.GFS_RESULT);
-                if (resultCode == RESULT_OK) {
-
-                    Log.i(TAG, string);
-
-                    EditText Txt = (EditText) findViewById(R.id.Position2);
-                    Txt.append(time);
-                    Txt.append(" ");
-                    Txt.append(string);
-                    Txt.append("\n");
-
-                } else {
-                    Toast.makeText(MainActivity.this, "Broadcast receiver result not OK",
-                            Toast.LENGTH_LONG).show();
-                }
-            }
-        }
-    };
+    private AppPreferences mAppPrefs;
+    private MyBCreceiver mReceiver;
 
     /**
      * Creates Intent if not already existing. Same intent is used for all fences.
@@ -145,12 +117,13 @@ public class MainActivity extends FragmentActivity implements
 
         // Get selection from shared Preferences. The preference is set when selecting a radiobutton.
         // Then set the text in the editable field to the last selected text (currently a default text)
-        SharedPreferences mPref = getSharedPreferences("com.tbay.android.FrequentSMS.PREFS", MODE_PRIVATE);
-        int SelectionId = mPref.getInt("LASTSELECTION", 0);
+        mAppPrefs = new AppPreferences(getApplicationContext());
 
         RadioGroup rg = (RadioGroup) findViewById(R.id.whichSMS);
-        rg.check(SelectionId);
-        setText(SelectionId);
+
+        RadioButton rb = (RadioButton)rg.getChildAt(mAppPrefs.SelectionId);
+        rg.check(rb.getId());
+        setText(mAppPrefs.SelectionId);
 
         // Create an instance of GoogleAPIClient.
         if (mGoogleApiClient == null) {
@@ -163,6 +136,8 @@ public class MainActivity extends FragmentActivity implements
 
         // Register context menu for radio button group
         registerForContextMenu(rg);
+
+        mReceiver = new MyBCreceiver();
     }
 
     @Override
@@ -213,18 +188,27 @@ public class MainActivity extends FragmentActivity implements
 
         switch (rbid) {
             case R.id.Wifi:
-                smsManager.sendTextMessage(AppConstants.phoneWifi, null, Txt.getText().toString(), null, null);
+                mAppPrefs.Key1_Msg = Txt.getText().toString();
+                mAppPrefs.SelectionId = 0;
+                smsManager.sendTextMessage(AppConstants.phoneWifi, null, mAppPrefs.Key1_Msg, null, null);
                 break;
             case R.id.Aftensmad:
-                smsManager.sendTextMessage(AppConstants.phoneAnnette, null, Txt.getText().toString(), null, null);
-                break;
-            case R.id.TestSMS:
-                smsManager.sendTextMessage(AppConstants.phonePrivate, null, Txt.getText().toString(), null, null);
+                mAppPrefs.Key2_Msg = Txt.getText().toString();
+                mAppPrefs.SelectionId = 1;
+                smsManager.sendTextMessage(AppConstants.phoneAnnette, null, mAppPrefs.Key2_Msg, null, null);
                 break;
             case R.id.Snart_hjemme:
-                smsManager.sendTextMessage(AppConstants.phoneAnnette, null, Txt.getText().toString(), null, null);
+                mAppPrefs.Key3_Msg = Txt.getText().toString();
+                mAppPrefs.SelectionId = 2;
+                smsManager.sendTextMessage(AppConstants.phoneAnnette, null, mAppPrefs.Key3_Msg, null, null);
+                break;
+            case R.id.TestSMS:
+                mAppPrefs.Key4_Msg = Txt.getText().toString();
+                mAppPrefs.SelectionId = 3;
+                smsManager.sendTextMessage(AppConstants.phonePrivate, null, mAppPrefs.Key4_Msg, null, null);
                 break;
         }
+        mAppPrefs.savePreferences(getApplicationContext());
     }
 
 
@@ -236,17 +220,18 @@ public class MainActivity extends FragmentActivity implements
 
         EditText Txt = (EditText) findViewById(R.id.SMSText);
         switch (id) {
-            case R.id.Wifi:
-                Txt.setText(AppConstants.txtWifi);
+            case 0:
+                Txt.setText(AppPreferences.Key1_Msg);
                 break;
-            case R.id.Aftensmad:
-                Txt.setText(AppConstants.txtShopping);
+            case 1:
+                Txt.setText(AppPreferences.Key2_Msg);
                 break;
-            case R.id.TestSMS:
-                Txt.setText(AppConstants.txtTestSMS);
+            case 2:
+                Txt.setText(AppPreferences.Key3_Msg);
                 break;
-            case R.id.Snart_hjemme:
-                Txt.setText(AppConstants.txtHomeSoon);
+            case 3:
+                Txt.setText(AppPreferences.Key4_Msg);
+                break;
         }
     }
 
@@ -260,25 +245,33 @@ public class MainActivity extends FragmentActivity implements
         int rbid = rg.getCheckedRadioButtonId();
 
         EditText Txt = (EditText) findViewById(R.id.SMSText);
+        EditText et = (EditText) findViewById(R.id.LogTexts);
         switch (rbid) {
             case R.id.Wifi:
-                Txt.setText(AppConstants.txtWifi);
+                mAppPrefs.SelectionId = 0;
+                Txt.setText(AppPreferences.Key1_Msg);
+                et.append(AppPreferences.Key1_Msg+"\n");
                 break;
             case R.id.Aftensmad:
-                Txt.setText(AppConstants.txtShopping);
-                break;
-            case R.id.TestSMS:
-                Txt.setText(AppConstants.txtTestSMS);
+                mAppPrefs.SelectionId = 1;
+                Txt.setText(AppPreferences.Key2_Msg);
+                et.append(AppPreferences.Key2_Msg+"\n");
                 break;
             case R.id.Snart_hjemme:
-                Txt.setText(AppConstants.txtHomeSoon);
+                mAppPrefs.SelectionId = 2;
+                Txt.setText(AppPreferences.Key3_Msg);
+                et.append(AppPreferences.Key3_Msg+"\n");
+                break;
+            case R.id.TestSMS:
+                mAppPrefs.SelectionId = 3;
+                Txt.setText(AppPreferences.Key4_Msg);
+                et.append(AppPreferences.Key4_Msg+"\n");
+                break;
         }
 
         // Save time for SMS transmission in preferences
-        SharedPreferences mPref = getSharedPreferences("com.tbay.android.FrequentSMS.PREFS", MODE_PRIVATE);
-        SharedPreferences.Editor editor = mPref.edit();
-        editor.putInt("LASTSELECTION", rbid);
-        editor.commit();
+
+        mAppPrefs.savePreferences(getApplicationContext());
     }
 
     @Override
@@ -427,8 +420,7 @@ public class MainActivity extends FragmentActivity implements
 
         mGoogleApiClient.connect();
 
-        registerReceiver(receiver, new IntentFilter(
-                GeofenceTransitionsIntentService.TAG));
+        //egisterReceiver(receiver, new IntentFilter(GeofenceTransitionsIntentService.TAG));
     }
 
     @Override
@@ -441,7 +433,7 @@ public class MainActivity extends FragmentActivity implements
         }
 
         // In future: maybe let receiver registered.
-        unregisterReceiver(receiver);
+        //unregisterReceiver(receiver);
     }
 
     public void onResult(Status status) {

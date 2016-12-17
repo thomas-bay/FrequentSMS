@@ -102,14 +102,15 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="278dp">
+            android:id="@+id/LogScrollBox"
+            android:layout_height="300dp">
 
             <EditText
                 android:layout_width="match_parent"
                 android:inputType="textMultiLine|textNoSuggestions"
                 android:ems="10"
                 android:selectAllOnFocus="false"
-                android:id="@+id/Position2"
+                android:id="@+id/LogTexts"
                 android:scrollbars="vertical"
                 android:focusableInTouchMode="false"
                 android:focusable="false"
@@ -119,7 +120,10 @@
                 android:verticalScrollbarPosition="right"
                 android:visibility="visible"
                 android:enabled="true"
-                android:layout_height="366dp" />
+                android:singleLine="false"
+                android:gravity="fill"
+                android:layout_height="match_parent"
+                android:height="200dp" />
         </ScrollView>
 
     </RadioGroup>

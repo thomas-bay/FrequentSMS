@@ -8,6 +8,6 @@ public final class BuildConfig {
   public static final String APPLICATION_ID = "com.tbay.android.FrequentSMS";
   public static final String BUILD_TYPE = "debug";
   public static final String FLAVOR = "";
-  public static final int VERSION_CODE = 109;
-  public static final String VERSION_NAME = "1.09";
+  public static final int VERSION_CODE = 110;
+  public static final String VERSION_NAME = "1.10";
 }

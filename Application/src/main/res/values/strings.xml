@@ -15,21 +15,13 @@
   -->
 
 <resources>
-    <string name="test_text">Test</string>
-    <string name="clear_text">Clear</string>
-    <string name="wifi_connection">The active connection is wifi.</string>
-    <string name="mobile_connection">The active connection is mobile.</string>
-    <string name="no_wifi_or_mobile">No wireless or mobile connection.</string>
-    <string name="start_text">Start</string>
-    <string name="stop_text">Stop</string>
-    <string name="send_text">Dut duttelut!</string>
-    <string name="ip_text">10.0.0.10</string>
     <string name="Wifi_txt">Wifi</string>
     <string name="Aftensmad_txt">Kommer du hjem til aftensmad?</string>
     <string name="Hjemme_txt"></string>
     <string name="TestSMS_txt">Test sms message from App</string>
     <string name="Indkøb">Er der noget jeg skal købe med på vejen hjem?</string>
     <string name="geofence_transition_invalid_type">Geofence invalid transition type</string>
+
 
     <string name="EditMenuItem">Edit item</string>
     <string name="ShowMenuItem">Show</string>
