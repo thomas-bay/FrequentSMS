@@ -22,7 +22,7 @@ public final class AppConstants {
     static final float BibloRadius = (float) 100.0;
     static final String LibraryId = "Biblo";
 
-    static final boolean SendPositionSMS = false;
+    static final boolean SendPositionSMS = true;
 
     static final float WorkLatency = (float)12.0*3600*1000; // ms
 

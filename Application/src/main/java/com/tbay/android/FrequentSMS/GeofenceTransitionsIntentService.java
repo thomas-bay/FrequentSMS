@@ -32,6 +32,9 @@ public class GeofenceTransitionsIntentService extends IntentService {
     static final String GFS_TRANSITION = "Transition";
     static final String GFS_DETAILS = "Details";
     static final String GFS_TIME = "Time";
+    public static final String PARAM_IN_MSG = "imsg";
+    public static final String PARAM_OUT_MSG = "omsg";
+
     static final int TIME_LAST_WIFI_SMS = 0;
 
     private SharedPreferences mPrefs;
@@ -146,9 +149,9 @@ public class GeofenceTransitionsIntentService extends IntentService {
             // Inform the main activity
             sendBroadcast(BcIntent);
 
-         } else {
+        } else {
             // Log the error.
-            Log.e(TAG, getString(R.string.geofence_transition_invalid_type));
+            Log.w(TAG, getString(R.string.geofence_transition_invalid_type) + ":" + Integer.toString(geofenceTransition));
         }
     }
 

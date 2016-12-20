@@ -23,14 +23,17 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.telephony.SmsManager;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ContextMenu;
 import android.view.MenuInflater;
 
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.location.Location;
@@ -78,6 +81,7 @@ public class MainActivity extends FragmentActivity implements
     PendingIntent mGeofencePendingIntent;
     private AppPreferences mAppPrefs;
     private MyBCreceiver mReceiver;
+    private Intent MyIntentService;
 
     /**
      * Creates Intent if not already existing. Same intent is used for all fences.
@@ -134,6 +138,12 @@ public class MainActivity extends FragmentActivity implements
         // Currently not in use but keep for future projects.
         UIMsgHandler handler = new UIMsgHandler(TAG);
 
+
+        // Start the intent service
+        Intent MyServiceIntent = new Intent(this, GeofenceTransitionsIntentService.class);
+        MyServiceIntent.putExtra(GeofenceTransitionsIntentService.PARAM_IN_MSG, "Starting intent service");
+        startService(MyServiceIntent);
+
         // Register context menu for radio button group
         registerForContextMenu(rg);
 
@@ -150,7 +160,9 @@ public class MainActivity extends FragmentActivity implements
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        //AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        //int position = info.position;
+
         switch (item.getItemId()) {
             case R.id.edit:
                 //editNote(info.id);
@@ -161,9 +173,9 @@ public class MainActivity extends FragmentActivity implements
 
                 RadioButton rb = (RadioButton) findViewById(rbid);
 
-                int position = rg.indexOfChild(rb);
+                int position2 = rg.indexOfChild(rb);
 
-                Toast.makeText(MainActivity.this, "Telefon nummer: " + Integer.toString(position),
+                Toast.makeText(MainActivity.this, "Telefon nummer: " + Integer.toString(position2),
                         Toast.LENGTH_LONG).show();
                 return true;
             default:

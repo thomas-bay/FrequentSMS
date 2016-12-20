@@ -8,7 +8,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_8be55c58a907bc414fd9cda4a1d947b54bc8d118\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\internal_impl-25.0.1_8be55c58a907bc414fd9cda4a1d947b54bc8d118\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -17,7 +17,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-10.0.1_f93e3c36b7d8574d5bf4dc5125f37c4b92b48e4e\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-auth-10.0.1_f93e3c36b7d8574d5bf4dc5125f37c4b92b48e4e\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -26,7 +26,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="1e11c68fec92a17c84dd8d1dd80e74c4e67b12e2">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-games-10.0.1_638358c212d746d5a201f180e5c79297f6b08271\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-games-10.0.1_638358c212d746d5a201f180e5c79297f6b08271\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -35,7 +35,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="4385ccc0a88b33d182a836eadb47be55c8eb1107">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-awareness-10.0.1_6717dc4b87bba811ad5180350ac52b0256404722\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-awareness-10.0.1_6717dc4b87bba811ad5180350ac52b0256404722\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -44,7 +44,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="dd39827d2067497e60e21da48a7926000b6d4b0c">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-10.0.1_5d7eb66df761a61f9163fb75cd75a884e019a24e\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.firebase-firebase-storage-10.0.1_5d7eb66df761a61f9163fb75cd75a884e019a24e\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -53,7 +53,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.1_c9a327048bb5c1b73d3859cc14b71da8119fce6e\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.android.support-support-core-ui-25.0.1_c9a327048bb5c1b73d3859cc14b71da8119fce6e\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -62,7 +62,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="d0460bf07cc3657e0be518ca01c174493951c6b8">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-10.0.1_231ca1203ffd20e35e7682020cf6a733be571285\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-ads-10.0.1_231ca1203ffd20e35e7682020cf6a733be571285\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -71,7 +71,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="f83b00041ecfba705603fec40363416c7de69719">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_e62533f281b47e831c9d83bd2940156924218643\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\internal_impl-25.0.1_e62533f281b47e831c9d83bd2940156924218643\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -80,7 +80,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="7a64bf6dc775198eed9db9468a133adf7dfe6562">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-fitness-10.0.1_de524dc83d0dbc106737605f344c2b7b7d7707dd\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-fitness-10.0.1_de524dc83d0dbc106737605f344c2b7b7d7707dd\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -89,7 +89,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.0.1_837b6f81260c555200f93dbb47a64d81ec114018\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.android.support-support-fragment-25.0.1_837b6f81260c555200f93dbb47a64d81ec114018\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -98,7 +98,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="2d5d113b0352ab60946fc44c518cf68fd26cbb79">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-10.0.1_b02052a04024047375dc73d65420962df7ff0d7d\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-wallet-10.0.1_b02052a04024047375dc73d65420962df7ff0d7d\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -107,7 +107,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.0.1_3e4c101e4be4cb561f1b5ffd550e726d81b83f06\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.android.support-support-core-utils-25.0.1_3e4c101e4be4cb561f1b5ffd550e726d81b83f06\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -116,7 +116,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="09cf6aa1390f95157e8295d02be7868f568825fc">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-common-10.0.1_ae5d8ffae14121f61ac506be16b72bcc282496d7\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.firebase-firebase-storage-common-10.0.1_ae5d8ffae14121f61ac506be16b72bcc282496d7\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -125,7 +125,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="b1df8fa3d372a27e4e969ce00b00689ee1eed031">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-10.0.1_52377a3983132d11bdbff36ef154face177fb6ce\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-10.0.1_52377a3983132d11bdbff36ef154face177fb6ce\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -134,7 +134,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.1_f49ded9de77a60ad2e309c52e247a0283b8e038f\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.android.support-support-v4-25.0.1_f49ded9de77a60ad2e309c52e247a0283b8e038f\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -143,7 +143,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="771267c5b0c7a5b348d3205dcfa1f871af7e0177">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-10.0.1_8ab28483c91ff8e92aa89b58f6f15c0fab58e482\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-cast-10.0.1_8ab28483c91ff8e92aa89b58f6f15c0fab58e482\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -152,7 +152,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="57c2eceb8548de84509d1ebc293fedec53231f6c">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gass-10.0.1_80d44935d0bd52ca2bc05506672212925f2ea764\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-gass-10.0.1_80d44935d0bd52ca2bc05506672212925f2ea764\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -161,7 +161,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.1_40ba8bf4441256920654833178fcc23a2f0e1427\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.android.support-support-compat-25.0.1_40ba8bf4441256920654833178fcc23a2f0e1427\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -170,7 +170,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="4b17463c814bdc562fb0392fa3494063623a0904">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-messaging-10.0.1_16a7e1dcc30f1998ca950f26374b9cdecb70f7db\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.firebase-firebase-messaging-10.0.1_16a7e1dcc30f1998ca950f26374b9cdecb70f7db\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -179,7 +179,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-10.0.1_48fb09e95cb14c6a959116d784ef2d2d484fc781\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.firebase-firebase-database-10.0.1_48fb09e95cb14c6a959116d784ef2d2d484fc781\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -188,7 +188,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="92c871a22463a247e8a77a9f3fd231c278788c4a">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-10.0.1_34ea366927f01618dc6ea3fc251b28f2d47f2714\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-panorama-10.0.1_34ea366927f01618dc6ea3fc251b28f2d47f2714\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -197,7 +197,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="8308ed003522a2ee8958311afcc4cfd0470377cd">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-10.0.1_c0e3ba44adf4abace5d390622e6126a9cc47e8e8\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-gcm-10.0.1_c0e3ba44adf4abace5d390622e6126a9cc47e8e8\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -206,7 +206,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-10.0.1_c89e860b8de9bf75d43cfbf79ae2df457823e985\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.firebase-firebase-iid-10.0.1_c89e860b8de9bf75d43cfbf79ae2df457823e985\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -215,7 +215,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="f3e51e9c5233b8897f61e08a6a27bc36283c2724">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-places-10.0.1_fe8800c1417c27f8d5cfc19add99767db6182e24\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-places-10.0.1_fe8800c1417c27f8d5cfc19add99767db6182e24\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -224,7 +224,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-10.0.1_c9eff9909a72db1545057407f131864a45b2ae50\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.firebase-firebase-analytics-impl-10.0.1_c9eff9909a72db1545057407f131864a45b2ae50\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -233,7 +233,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-10.0.1_fea6da0ed4792d62f3cc7f0b5868ac4991f926ca\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.firebase-firebase-common-10.0.1_fea6da0ed4792d62f3cc7f0b5868ac4991f926ca\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -242,7 +242,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-10.0.1_191028ea4eeed6e650114e70e3c1c3153218852f\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.firebase-firebase-database-connection-10.0.1_191028ea4eeed6e650114e70e3c1c3153218852f\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -251,7 +251,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="ae80d328a8548b4610ead6c624bab8c6a6984f5b">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-appindexing-10.0.1_42a9bd8cdd0780a1c36061a15ef6501754c2f442\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.firebase-firebase-appindexing-10.0.1_42a9bd8cdd0780a1c36061a15ef6501754c2f442\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -260,7 +260,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-10.0.1_77400b779aa42299bbf5afef47b3d319a07666df\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-tasks-10.0.1_77400b779aa42299bbf5afef47b3d319a07666df\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -269,7 +269,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-10.0.1_41c20fa7487323f357bac48037302c33af6e77c0\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-auth-base-10.0.1_41c20fa7487323f357bac48037302c33af6e77c0\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -278,7 +278,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.1_1486082fc81d550db3050b248c6dc36a21d9664a\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.android.support-support-vector-drawable-25.0.1_1486082fc81d550db3050b248c6dc36a21d9664a\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -287,7 +287,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="e871881b36b32e6bfd271a830c6eeb54ff0fc185">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-impl-10.0.1_fe858ad1227afe55ccb5e47e042272af9516d00b\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-analytics-impl-10.0.1_fe858ad1227afe55ccb5e47e042272af9516d00b\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -296,7 +296,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="25438f55fc6d906a0e72f30b21487541430ede43">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-10.0.1_280cac9eccf81443445d7ccb5164e34e68d0fb19\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-base-10.0.1_280cac9eccf81443445d7ccb5164e34e68d0fb19\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -305,7 +305,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="c14f0c89f28cf782e42581ab0aba5f63af39b3d2">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-10.0.1_d65a0e9a736fe5cfaa203188ef334a9a02d72a4c\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-plus-10.0.1_d65a0e9a736fe5cfaa203188ef334a9a02d72a4c\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -314,7 +314,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_f0a70cacc06b069e0d116a694dfeb5f5d06e1e5b\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\internal_impl-25.0.1_f0a70cacc06b069e0d116a694dfeb5f5d06e1e5b\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -323,7 +323,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="df1cb17511aabbb63264a0024949d1e42502a512">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-framework-10.0.1_51164a2702286f793bd4fe26a01264c8ee5655b6\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-cast-framework-10.0.1_51164a2702286f793bd4fe26a01264c8ee5655b6\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -332,7 +332,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="734e80dffea7bd76c18ae256822a124c30d85850">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-24.0.0_cb94c8d037600c22e9bd10c7dc962f1ceb6b36d6\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.android.support-palette-v7-24.0.0_cb94c8d037600c22e9bd10c7dc962f1ceb6b36d6\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -341,7 +341,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="c6e1f361e9d61aece9dac39b77fcc98a337a144d">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-nearby-10.0.1_2a55bfa84197574ff8f65bd9a70c3ea30454042f\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-nearby-10.0.1_2a55bfa84197574ff8f65bd9a70c3ea30454042f\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -350,7 +350,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="ba6aa5e69ef31dee57208125323cee958fc67565">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-10.0.1_bac209caf702b6b726e3de406a7ee0829e11cd2c\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-vision-10.0.1_bac209caf702b6b726e3de406a7ee0829e11cd2c\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -359,7 +359,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.1_c8aa6dd507fff4a280239efa9d69bbcc831b3efb\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.android.support-animated-vector-drawable-25.0.1_c8aa6dd507fff4a280239efa9d69bbcc831b3efb\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -368,7 +368,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="408a599ac77cd17fe8e8919326bec617b3d005bd">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-10.0.1_49ad8ab9e045274f69295bf85312ee6de318a8db\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-wearable-10.0.1_49ad8ab9e045274f69295bf85312ee6de318a8db\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -377,7 +377,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_cd650545c129916ba5b1344e0f30de538f640261\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\internal_impl-25.0.1_cd650545c129916ba5b1344e0f30de538f640261\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -386,7 +386,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="1d193729baf37df3d902a423291423a0df7e3779">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-clearcut-10.0.1_1fb0c417c75f6e0050d5788c016cfb1d3de1eeb4\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-clearcut-10.0.1_1fb0c417c75f6e0050d5788c016cfb1d3de1eeb4\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -395,7 +395,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-10.0.1_4dd3fb4e2eaa166abbf256a0ea0e02f18a9f1f89\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.firebase-firebase-analytics-10.0.1_4dd3fb4e2eaa166abbf256a0ea0e02f18a9f1f89\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -404,7 +404,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-10.0.1_2e73276f4a773bdc51124bf8ff187d28fa750746\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.firebase-firebase-auth-10.0.1_2e73276f4a773bdc51124bf8ff187d28fa750746\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -413,7 +413,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.1_f658b11d8575db75f20c0a2523d57bd95f905514\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.android.support-support-media-compat-25.0.1_f658b11d8575db75f20c0a2523d57bd95f905514\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -422,7 +422,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="6bb5d347ebc0c6ef3c83a905222a688da5d2f7b4">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-iid-10.0.1_7c9fa1771d4cb22fd858faed87c2d7ab6aa0391c\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-iid-10.0.1_7c9fa1771d4cb22fd858faed87c2d7ab6aa0391c\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -431,7 +431,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_7f045a5707d188b70daa57a91280111e14d411f4\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\internal_impl-24.0.0_7f045a5707d188b70daa57a91280111e14d411f4\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -440,16 +440,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="de29a39f9260f88151b1ef453140e71c76b6c415">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-crash-10.0.1_58d2ade705ef606dac6ea04a5185f3863f729ac3\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Thomas\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.1_d727311d2d0cc9b53b04cf6e9347ce6bf51c4f28\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.firebase-firebase-crash-10.0.1_58d2ade705ef606dac6ea04a5185f3863f729ac3\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -458,7 +449,16 @@
         optimize="true"
         revision="23.0.3"
         sha1="4c829ff0ccfecb28a999ee46d9e75948dfc777a4">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-10.0.1_439768cad59fa4aa1c4a63a30343c6b2574d0ab2\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-analytics-10.0.1_439768cad59fa4aa1c4a63a30343c6b2574d0ab2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thomas\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\support-annotations-25.0.1_d727311d2d0cc9b53b04cf6e9347ce6bf51c4f28\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -467,7 +467,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="f23ad0f8e58713ff4b55f61c0bbde3830378347c">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-v4-impl-10.0.1_b591aeab0a98076e0722a12257c054fc2c3e5bc0\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-tagmanager-v4-impl-10.0.1_b591aeab0a98076e0722a12257c054fc2c3e5bc0\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -476,7 +476,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="39907d5c8f5902fffef30160ca7447c93b82405c">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-10.0.1_e9a8d8a01618f5b15a001d70b5be4f424d3d23a3\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-appinvite-10.0.1_e9a8d8a01618f5b15a001d70b5be4f424d3d23a3\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -485,7 +485,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="ffc15e965a9e8c28f24455eedd4cac215c45d1fc">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-config-10.0.1_9f86501d4b69fa026206cbfe788845f30cef769e\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.firebase-firebase-config-10.0.1_9f86501d4b69fa026206cbfe788845f30cef769e\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -494,7 +494,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="971509bbe30bb7b971fc1c49d7b23d0d818830ac">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-10.0.1_e8f67596e0aeb6e44cc73fb65e5bbc5f822e69e8\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-tagmanager-10.0.1_e8f67596e0aeb6e44cc73fb65e5bbc5f822e69e8\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -503,7 +503,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-mediarouter-v7-24.0.0_b3a83d5db223522200c3fa7d0f8b53b4b53d97da\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.android.support-mediarouter-v7-24.0.0_b3a83d5db223522200c3fa7d0f8b53b4b53d97da\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -512,7 +512,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="b955cb3a1ad6f1b6ff728ce1e0cd592c1717b440">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-lite-10.0.1_8db38820e0cd462adc07728afc3608f33fdaa951\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-ads-lite-10.0.1_8db38820e0cd462adc07728afc3608f33fdaa951\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -521,7 +521,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="028f8255cb977b29cdffbfcf05caa0459686120c">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-10.0.1_f7f1d91fee6cd017eb8691d2e4de1d6a3d9bfb86\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-drive-10.0.1_f7f1d91fee6cd017eb8691d2e4de1d6a3d9bfb86\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -530,7 +530,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="f6cf557be4dbd0282ea2388633e5378634423226">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-safetynet-10.0.1_2506a5fe76d82243a14bc74294db586205bbbbeb\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-safetynet-10.0.1_2506a5fe76d82243a14bc74294db586205bbbbeb\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -539,7 +539,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_b7d2736f3d05fb5e22ed8814ec56ecfdb973fc11\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\internal_impl-25.0.1_b7d2736f3d05fb5e22ed8814ec56ecfdb973fc11\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -548,7 +548,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="27777b3cad3c20b1acab19f6e37fe3e03371bf6e">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-10.0.1_bf35d8900f96f02028af322bb57945c104d034db\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-maps-10.0.1_bf35d8900f96f02028af322bb57945c104d034db\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -557,7 +557,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="44a694d4095be84c2888764b1f7256b385c030ad">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-10.0.1_278c071c16ca27d8b18769447e4a0233e48c3397\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-location-10.0.1_278c071c16ca27d8b18769447e4a0233e48c3397\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -566,7 +566,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="45305e6af414dab5aba6c3225081c2f15c3bdd1e">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-instantapps-10.0.1_0873abc49d6fd48bcbe0701e4c65ff7bb341c6c4\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-instantapps-10.0.1_0873abc49d6fd48bcbe0701e4c65ff7bb341c6c4\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -575,7 +575,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="a48dc0b148059764d32500be558702d5ff932058">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-10.0.1_878a417c9bb62abbf3db124dbb6b81d99f817f0b\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-identity-10.0.1_878a417c9bb62abbf3db124dbb6b81d99f817f0b\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -584,7 +584,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-10.0.1_0afb1bf5f0b1ee8276ef936237ca1cca272e4f49\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.google.android.gms-play-services-basement-10.0.1_0afb1bf5f0b1ee8276ef936237ca1cca272e4f49\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -593,7 +593,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
-        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.0.1_00fcdfa99de9874bd13055b498563638c4394f33\classes.dex" />
+        <dex dex="C:\Users\Thomas\AndroidStudioProjects\FrequentSMS\Application\build\intermediates\transforms\dex\release\folders\1000\10\com.android.support-appcompat-v7-25.0.1_00fcdfa99de9874bd13055b498563638c4394f33\classes.dex" />
     </item>
 
 </items>
