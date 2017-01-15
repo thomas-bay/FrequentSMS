@@ -60,6 +60,7 @@ public class GeofenceTransitionsIntentService extends IntentService {
         // Code for saving persistent data
         SharedPreferences mPref = getSharedPreferences("com.tbay.android.FrequentSMS.PREFS", MODE_PRIVATE);
         long mTimeLastWifiSMS = mPref.getLong("LASTSMS", 0);
+        long currentMillis = currentTimeMillis();
 
         // Get the transition type.
         int geofenceTransition = geofencingEvent.getGeofenceTransition();
@@ -98,14 +99,22 @@ public class GeofenceTransitionsIntentService extends IntentService {
 
             if (AppConstants.SendPositionSMS) {
                 SmsManager smsManager = SmsManager.getDefault();
-                smsManager.sendTextMessage(AppConstants.phonePrivate, AppConstants.phoneWork, mGeofenceTransitionDetails, null, null);
+                try {
+                    smsManager.sendTextMessage(AppConstants.phonePrivate, AppConstants.phoneWork, mGeofenceTransitionDetails, null, null);
+                }
+                catch (Exception e)  {
+                    Log.i(TAG, e.getMessage());
+                }
             }
 
-            if ((geofenceTransition == Geofence.GEOFENCE_TRANSITION_DWELL) && mGeofenceTransitionDetails.contains("Work")) {
+            String msg = "Time: " + Long.toString(currentMillis) + " Last: " + Long.toString(mTimeLastWifiSMS) + " Diff: " + Long.toString(currentMillis-mTimeLastWifiSMS);
+            Log.i(TAG, msg);
 
-                SmsManager smsManager = SmsManager.getDefault();
+            if ((geofenceTransition == Geofence.GEOFENCE_TRANSITION_DWELL) && (mGeofenceTransitionDetails.contains("Work")) || mGeofenceTransitionDetails.contains("Biblo")){
 
-                if ((currentTimeMillis() - mTimeLastWifiSMS) > AppConstants.WorkLatency)
+                SmsManager smsManager2 = SmsManager.getDefault();
+
+                if ((currentMillis - mTimeLastWifiSMS) > AppConstants.WorkLatency)
                 {
 
                     Log.i(TAG, AppConstants.phoneWifi);
@@ -114,7 +123,7 @@ public class GeofenceTransitionsIntentService extends IntentService {
 
                     try
                     {
-                        smsManager.sendTextMessage(AppConstants.phoneWifi, AppConstants.phoneWork, AppPreferences.Key1_Msg, null, null);
+                        smsManager2.sendTextMessage(AppConstants.phoneWifi, AppConstants.phoneWork, AppPreferences.Key1_Msg, null, null);
                     }
                     catch (Exception e)
                     {
@@ -123,13 +132,19 @@ public class GeofenceTransitionsIntentService extends IntentService {
 
                     // Save time for SMS transmission in preferences
                     SharedPreferences.Editor editor = mPref.edit();
-                    editor.putLong("LASTSMS", currentTimeMillis());
+                    editor.putLong("LASTSMS", currentMillis);
                     editor.commit();
                 }
                 else
                 {
+
                     // Temporary debug
-                    // smsManager.sendTextMessage(AppConstants.phonePrivate, AppConstants.phoneWork, "Deferred wifi SMS. Too early.", null, null);
+                    try {
+                        smsManager2.sendTextMessage(AppConstants.phonePrivate, AppConstants.phoneWork, "Deferred wifi SMS. Too early.", null, null);
+                    }
+                    catch (Exception e) {
+                        Log.i(TAG, e.getMessage());
+                    }
                 }
             }
 
@@ -149,6 +164,7 @@ public class GeofenceTransitionsIntentService extends IntentService {
             // Inform the main activity
             sendBroadcast(BcIntent);
 
+            Log.i(TAG, "Test message");
         } else {
             // Log the error.
             Log.w(TAG, getString(R.string.geofence_transition_invalid_type) + ":" + Integer.toString(geofenceTransition));

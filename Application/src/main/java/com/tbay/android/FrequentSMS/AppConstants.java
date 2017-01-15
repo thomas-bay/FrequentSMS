@@ -24,7 +24,7 @@ public final class AppConstants {
 
     static final boolean SendPositionSMS = true;
 
-    static final float WorkLatency = (float)12.0*3600*1000; // ms
+    static final long WorkLatency = (long)(12.0*3600*1000); // ms
 
     // Phone numbers
     static final String phonePrivate = "+4530221982";
